@@ -4,6 +4,8 @@ using System.Xml;
 
 using Sgml;
 
+using Solvek.Offliner.Lib.WidgetDescription;
+
 namespace Solvek.Offliner.Lib.Filters
 {
 	public class HtmlToXhtmlFilter : IFilter

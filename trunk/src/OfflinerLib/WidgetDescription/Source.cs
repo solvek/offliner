@@ -1,7 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace Solvek.Offliner.Lib
+namespace Solvek.Offliner.Lib.WidgetDescription
 {
 	[XmlRoot("source")]
 	public class Source
@@ -15,16 +16,22 @@ namespace Solvek.Offliner.Lib
 		[XmlAttribute("filter")]
 		public string FilterType;
 
+		[XmlAttribute("user-agent")]
+		public string UserAgent;
+
+		[XmlAttribute("accept")]
+		public string Accept;
+
 		[XmlIgnore]
 		public IFilter Filter
 		{
 			get
 			{
-				if (_filter == null)
+				if (this._filter == null)
 				{
-					
+					_filter = (IFilter)Activator.CreateInstance(Type.GetType(FilterType));
 				}
-				return _filter;
+				return this._filter;
 			}
 		}
 
