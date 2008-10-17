@@ -28,6 +28,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Kerr.Credentials, Version=1.0.0.1, Culture=neutral, PublicKeyToken=ce7a2d015f9fdd1b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Kerr.Credentials.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\log4net.dll</HintPath>
@@ -39,15 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine.cs" />
+    <Compile Include="Exceptions\WidgetLoadingException.cs" />
+    <Compile Include="Fetching\IFetcher.cs" />
+    <Compile Include="Fetching\WebFetcher.cs" />
     <Compile Include="Filters\EmptizeFilter.cs" />
     <Compile Include="Filters\HtmlToXhtmlFilter.cs" />
     <Compile Include="Filters\XmlFilter.cs" />
     <Compile Include="Helpers\ApplicationFolder.cs" />
-    <Compile Include="IFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunningWidget.cs" />
-    <Compile Include="Source.cs" />
-    <Compile Include="Widget.cs" />
+    <Compile Include="Runtime\WidgetProcessor.cs" />
+    <Compile Include="WidgetDescription\IFilter.cs" />
+    <Compile Include="WidgetDescription\Source.cs" />
+    <Compile Include="WidgetDescription\Widget.cs" />
+    <Compile Include="Exceptions\WidgetException.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\3dparty\sgmlreaderdll\SgmlReaderDll8.csproj">

@@ -8,7 +8,6 @@ using log4net.Repository;
 
 using NuSoft.Log4Net;
 
-using Solvek.Offliner.Lib;
 using Solvek.Offliner.Lib.Helpers;
 
 namespace Solvek.Offliner.WidgetTest
@@ -24,6 +23,14 @@ namespace Solvek.Offliner.WidgetTest
 		{
 			this.InitLogging();
 			this.LoadSettings();
+			try
+			{
+				ReloadWidget();
+			}
+			catch (Exception ex)
+			{
+				_log.Warn("Failed to load widget at starting", ex);
+			}
 		}
 
 		private void LoadSettings()
@@ -73,19 +80,33 @@ namespace Solvek.Offliner.WidgetTest
 			textBoxLog.Clear();
 		}
 
+		private void toolStripButtonUpdate_Click(object sender, EventArgs e)
+		{
+			_wTester.UpdateWidget();
+			webBrowserWidget.Url = new Uri(_wTester.ResultHtmlPath);
+			webBrowserWidget.Refresh();
+		}		
+
+		private void toolStripButtonLoadWidget_Click(object sender, EventArgs e)
+		{
+			ReloadWidget();
+		}
+		
 		private string SettingsFilePath
 		{
 			get { return Path.Combine(_applicationFolder.ApplicationPath, "Settings.xml"); }
 		}
 
-		private void toolStripButtonLoadWidget_Click(object sender, EventArgs e)
+		private void ReloadWidget()
 		{
-			this._widget = new RunningWidget(this.widgetPath.Text, "");
+			string widgetStateDirectory = Path.Combine(_applicationFolder.ApplicationPath, "widgets");
+			Directory.CreateDirectory(widgetStateDirectory);
+			_wTester.LoadWidget(this.widgetPath.Text, widgetStateDirectory);
 		}
 
 		private Settings _settings;
 		private readonly ApplicationFolder _applicationFolder = new ApplicationFolder("Solvek", "GearsWT");
-		private RunningWidget _widget;
+		private readonly WidgetTester _wTester = new WidgetTester();
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(MainForm));
 	}
