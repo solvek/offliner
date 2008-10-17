@@ -12,15 +12,12 @@ namespace Solvek.Offliner.Lib.Runtime
 {
 	public sealed class WidgetProcessor
 	{
-		public WidgetProcessor(string homePath, string statePath, bool debugMode)
+		public WidgetProcessor(string homePath, bool debugMode)
 		{
 			_homePath = homePath;			
 			_debugMode = debugMode;
 
 			LoadWidget();
-
-			_statePath = Path.Combine(statePath, _widget.Name);
-			Directory.CreateDirectory(_statePath);
 		}
 		
 		public void Update()
@@ -123,8 +120,8 @@ namespace Solvek.Offliner.Lib.Runtime
 		}
 
 		private string WidgetStateFilePath(string fileName)
-		{			
-			return Path.Combine(_statePath, "_sg_"+fileName);
+		{
+			return Path.Combine(_homePath, "_sg_" + fileName);
 		}
 
 		private string WidgetSourceFilePath(string fileName)
@@ -135,7 +132,6 @@ namespace Solvek.Offliner.Lib.Runtime
 		private DateTime _lastUpdated;
 		private Widget _widget;
 		private readonly string _homePath;
-		private readonly string _statePath;
 		private readonly bool _debugMode;
 
 		private readonly IFetcher _fetcher = new WebFetcher();
