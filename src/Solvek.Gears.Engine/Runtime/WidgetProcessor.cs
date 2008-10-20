@@ -5,6 +5,7 @@ using System.Xml;
 using System.Xml.Xsl;
 
 using log4net;
+
 using Solvek.Offliner.Lib.Fetching;
 using Solvek.Offliner.Lib.WidgetDescription;
 
@@ -29,7 +30,7 @@ namespace Solvek.Offliner.Lib.Runtime
 
 			foreach (Source source in _widget.Sources)
 			{
-				Stream stream = _fetcher.Fetch(source);
+				Stream stream = Fetcher.Fetch(source);
 				
 				if (_debugMode)
 				{
@@ -77,10 +78,10 @@ namespace Solvek.Offliner.Lib.Runtime
 				xml.Save(WidgetStateFilePath("xmlResult.xml"));
 			}
 
-			XslCompiledTransform xslt = new XslCompiledTransform(_debugMode);
+			XslCompiledTransform xslt = new XslCompiledTransform();
 			xslt.Load(WidgetSourceFilePath(_widget.Transformation));
 
-			using(XmlWriter result = new XmlTextWriter(ResultHtmlPath, Encoding.UTF8))
+			using (StreamWriter result = new StreamWriter(ResultHtmlPath, false, Encoding.UTF8))
 			using (XmlNodeReader nReader = new XmlNodeReader(xml))
 			{
 				xslt.Transform(nReader, result);
@@ -100,6 +101,11 @@ namespace Solvek.Offliner.Lib.Runtime
 		public string ResultHtmlPath
 		{
 			get { return WidgetStateFilePath("index.html"); }
+		}
+
+		public override string ToString()
+		{
+			return _widget.Name;
 		}
 
 		private void LoadWidget()
@@ -134,7 +140,7 @@ namespace Solvek.Offliner.Lib.Runtime
 		private readonly string _homePath;
 		private readonly bool _debugMode;
 
-		private readonly IFetcher _fetcher = new WebFetcher();
+		public static IFetcher Fetcher = new WebFetcher();
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(WidgetProcessor));
 	}

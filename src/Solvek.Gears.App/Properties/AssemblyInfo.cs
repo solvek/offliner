@@ -1,17 +1,16 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Solvek.Gears.App")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Solvek Gears")]
+[assembly: AssemblyDescription("Allows to have actual infromation without a continous internet connecton")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SL")]
-[assembly: AssemblyProduct("Solvek.Gears.App")]
-[assembly: AssemblyCopyright("Copyright © SL 2008")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Solvek")]
+[assembly: AssemblyProduct("Solvek Gears")]
+[assembly: AssemblyCopyright("Copyright © SL 2008 (www.Solvek.com)")]
+[assembly: AssemblyTrademark("Solvek")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -29,5 +28,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.1.0.0")]
 

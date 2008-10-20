@@ -1,11 +1,8 @@
 using System;
 using System.IO;
 using System.Net;
-using System.Runtime.InteropServices;
-using System.Security;
-using System.Windows.Forms;
 
-using Kerr;
+using log4net;
 
 using Solvek.Offliner.Lib.WidgetDescription;
 
@@ -13,6 +10,15 @@ namespace Solvek.Offliner.Lib.Fetching
 {
 	public class WebFetcher : IFetcher
 	{
+		public WebFetcher()
+		{
+		}
+
+		public WebFetcher(ICredentials proxyCredentials)
+		{
+			_proxyCredentials = proxyCredentials;
+		}
+		
 		public Stream Fetch(Source source)
 		{
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(source.Url);
@@ -28,53 +34,26 @@ namespace Solvek.Offliner.Lib.Fetching
 				request.Accept = source.Accept;
 			}
 
-			request.Proxy.Credentials = GetProxyCredentials();
+			if (_proxyCredentials != null)
+			{
+				request.Proxy.Credentials = _proxyCredentials;
+			}
 
-			HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
-
+			HttpWebResponse resp;
+			try
+			{
+				resp = (HttpWebResponse)request.GetResponse();
+			}
+			catch (WebException ex)
+			{
+				_log.Error("Web requesting error: ", ex);
+				_log.DebugFormat("WebException datails. Status: {0}, response lenght: {1}", ex.Status, ex.Response.ContentLength);
+				throw new ApplicationException(String.Format("Failed to retrieve data from {0}", source.Url), ex);
+			}
 			return resp.GetResponseStream();
 		}
 
-		private ICredentials GetProxyCredentials()
-		{
-			if (_proxyCredentials == null)
-			{
-				using (PromptForCredential dialog = new PromptForCredential())
-				{
-					dialog.TargetName = "Proxy";
-					dialog.Title = "Proxy Authentication";
-					dialog.Message = "Please enter UserName and Password for proxy";
-					//dialog.UserName = "initial user name";
-
-					dialog.DoNotPersist = false;
-					dialog.ShowSaveCheckBox = true;
-
-					if (dialog.ShowDialog() == DialogResult.OK)
-					{
-						string p = SecureStringToString(dialog.Password);
-						_proxyCredentials = new NetworkCredential(dialog.UserName.Substring(dialog.UserName.IndexOf('\\')+1), p);
-					}
-				}
-
-			}
-
-			return _proxyCredentials;
-		}
-
-		static String SecureStringToString(SecureString value)
-		{
-			IntPtr bstr = Marshal.SecureStringToBSTR(value);
-
-			try
-			{
-				return Marshal.PtrToStringBSTR(bstr);
-			}
-			finally
-			{
-				Marshal.FreeBSTR(bstr);
-			}
-		}
-
-		private ICredentials _proxyCredentials;
+		private readonly ICredentials _proxyCredentials;
+		static private readonly ILog _log = LogManager.GetLogger(typeof(WebFetcher));
 	}
 }

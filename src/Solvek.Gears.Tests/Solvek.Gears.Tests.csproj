@@ -40,9 +40,9 @@
     <Content Include="AuthoringTests.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OfflinerLib\OfflinerLib.csproj">
-      <Project>{CD03775E-A529-40A7-885C-AE2B05E43121}</Project>
-      <Name>OfflinerLib</Name>
+    <ProjectReference Include="..\Solvek.Gears.Engine\Solvek.Gears.Engine.csproj">
+      <Project>{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}</Project>
+      <Name>Solvek.Gears.Engine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />

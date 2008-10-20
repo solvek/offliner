@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetTest", "WidgetTest\WidgetTest.csproj", "{78EDBE79-0A71-4B63-9D03-230762DA5E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfflinerLib", "OfflinerLib\OfflinerLib.csproj", "{CD03775E-A529-40A7-885C-AE2B05E43121}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SgmlReaderDll8", "..\3dparty\sgmlreaderdll\SgmlReaderDll8.csproj", "{499527FF-AE52-450F-B3E3-4AD53E1712AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solvek.Gears.Tests", "Solvek.Gears.Tests\Solvek.Gears.Tests.csproj", "{B7229CFB-4685-4B82-A361-0BF311F884D2}"
@@ -14,6 +12,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		localtestrun.testrunconfig = localtestrun.testrunconfig
 		Solvek.Offliner.vsmdi = Solvek.Offliner.vsmdi
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solvek.Gears.App", "Solvek.Gears.App\Solvek.Gears.App.csproj", "{9A893B14-9BD6-4343-B366-A83E2FDC9872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solvek.Gears.Engine", "Solvek.Gears.Engine\Solvek.Gears.Engine.csproj", "{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{2279214D-589D-43E0-AC28-CA52A58363A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9C99DAE9-A708-4158-B7EF-C4316BDEAEAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestingApp", "TestingApp", "{1D49217E-7BAA-4CC4-B253-33D641338801}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -28,10 +36,6 @@ Global
 		{78EDBE79-0A71-4B63-9D03-230762DA5E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78EDBE79-0A71-4B63-9D03-230762DA5E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78EDBE79-0A71-4B63-9D03-230762DA5E44}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD03775E-A529-40A7-885C-AE2B05E43121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD03775E-A529-40A7-885C-AE2B05E43121}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD03775E-A529-40A7-885C-AE2B05E43121}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD03775E-A529-40A7-885C-AE2B05E43121}.Release|Any CPU.Build.0 = Release|Any CPU
 		{499527FF-AE52-450F-B3E3-4AD53E1712AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{499527FF-AE52-450F-B3E3-4AD53E1712AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{499527FF-AE52-450F-B3E3-4AD53E1712AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,8 +44,23 @@ Global
 		{B7229CFB-4685-4B82-A361-0BF311F884D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7229CFB-4685-4B82-A361-0BF311F884D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7229CFB-4685-4B82-A361-0BF311F884D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A893B14-9BD6-4343-B366-A83E2FDC9872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A893B14-9BD6-4343-B366-A83E2FDC9872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A893B14-9BD6-4343-B366-A83E2FDC9872}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9A893B14-9BD6-4343-B366-A83E2FDC9872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A893B14-9BD6-4343-B366-A83E2FDC9872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A893B14-9BD6-4343-B366-A83E2FDC9872}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78EDBE79-0A71-4B63-9D03-230762DA5E44} = {1D49217E-7BAA-4CC4-B253-33D641338801}
+		{499527FF-AE52-450F-B3E3-4AD53E1712AD} = {2279214D-589D-43E0-AC28-CA52A58363A9}
+		{B7229CFB-4685-4B82-A361-0BF311F884D2} = {9C99DAE9-A708-4158-B7EF-C4316BDEAEAF}
 	EndGlobalSection
 EndGlobal

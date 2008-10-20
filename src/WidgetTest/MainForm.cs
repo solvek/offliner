@@ -8,8 +8,6 @@ using log4net.Repository;
 
 using NuSoft.Log4Net;
 
-using Solvek.Offliner.Lib.Helpers;
-
 namespace Solvek.Offliner.WidgetTest
 {
 	public partial class MainForm : Form
@@ -63,7 +61,6 @@ namespace Solvek.Offliner.WidgetTest
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			_settings.LastWidget = widgetPath.Text;
-			_applicationFolder.EnsureExisting();
 			_settings.SaveSettings(SettingsFilePath);
 		}
 
@@ -91,21 +88,18 @@ namespace Solvek.Offliner.WidgetTest
 		{
 			ReloadWidget();
 		}
-		
-		private string SettingsFilePath
+
+		static private string SettingsFilePath
 		{
-			get { return Path.Combine(_applicationFolder.ApplicationPath, "Settings.xml"); }
+			get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Solvek/GearsWT/Settings.xml"); }
 		}
 
 		private void ReloadWidget()
 		{
-			string widgetStateDirectory = Path.Combine(_applicationFolder.ApplicationPath, "widgets");
-			Directory.CreateDirectory(widgetStateDirectory);
-			_wTester.LoadWidget(this.widgetPath.Text, widgetStateDirectory);
+			_wTester.LoadWidget(this.widgetPath.Text);
 		}
 
 		private Settings _settings;
-		private readonly ApplicationFolder _applicationFolder = new ApplicationFolder("Solvek", "GearsWT");
 		private readonly WidgetTester _wTester = new WidgetTester();
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(MainForm));

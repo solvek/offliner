@@ -44,13 +44,26 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.MSXML2, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Interop.MSXML2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\WidgetException.cs" />
+    <Compile Include="..\..\3dparty\sgmlreaderdll\SgmlParser.cs">
+      <Link>SgmlReader\SgmlParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\3dparty\sgmlreaderdll\SgmlReader.cs">
+      <Link>SgmlReader\SgmlReader.cs</Link>
+    </Compile>
     <Compile Include="Exceptions\WidgetLoadingException.cs" />
     <Compile Include="Fetching\IFetcher.cs" />
     <Compile Include="Fetching\WebFetcher.cs" />
@@ -59,8 +72,7 @@
     <Compile Include="Filters\XmlFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime\WidgetProcessor.cs" />
-    <Compile Include="SgmlReader\SgmlParser.cs" />
-    <Compile Include="SgmlReader\SgmlReader.cs" />
+    <Compile Include="Utilities\XslCompiledTransform.cs" />
     <Compile Include="WidgetDescription\IFilter.cs" />
     <Compile Include="WidgetDescription\Source.cs" />
     <Compile Include="WidgetDescription\StringPair.cs" />
