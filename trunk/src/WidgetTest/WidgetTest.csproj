@@ -28,9 +28,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Kerr.Credentials, Version=1.0.0.1, Culture=neutral, PublicKeyToken=ce7a2d015f9fdd1b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\PC\Kerr.Credentials.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\log4net.dll</HintPath>
+      <HintPath>..\..\lib\PC\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -77,9 +81,9 @@
     <Compile Include="WidgetTester.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OfflinerLib\OfflinerLib.csproj">
-      <Project>{CD03775E-A529-40A7-885C-AE2B05E43121}</Project>
-      <Name>OfflinerLib</Name>
+    <ProjectReference Include="..\Solvek.Gears.Engine\Solvek.Gears.Engine.csproj">
+      <Project>{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}</Project>
+      <Name>Solvek.Gears.Engine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

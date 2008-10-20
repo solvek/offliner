@@ -30,26 +30,30 @@ namespace Solvek.Gears.App
 		private void InitializeComponent()
 		{
 			this.mainMenu1 = new System.Windows.Forms.MainMenu();
-			this.menuItem1 = new System.Windows.Forms.MenuItem();
-			this.listBoxWidgetManager = new System.Windows.Forms.ListBox();
+			this.menuItemRefresh = new System.Windows.Forms.MenuItem();
+			this.listViewWidgets = new System.Windows.Forms.ListView();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
 			// 
-			this.mainMenu1.MenuItems.Add(this.menuItem1);
+			this.mainMenu1.MenuItems.Add(this.menuItemRefresh);
 			// 
-			// menuItem1
+			// menuItemRefresh
 			// 
-			this.menuItem1.Text = "Refresh";
-			this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
+			this.menuItemRefresh.Text = "Refresh";
+			this.menuItemRefresh.Click += new System.EventHandler(this.menuItemRefresh_Click);
 			// 
-			// listBoxWidgetManager
+			// listViewWidgets
 			// 
-			this.listBoxWidgetManager.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listBoxWidgetManager.Location = new System.Drawing.Point(0, 0);
-			this.listBoxWidgetManager.Name = "listBoxWidgetManager";
-			this.listBoxWidgetManager.Size = new System.Drawing.Size(240, 268);
-			this.listBoxWidgetManager.TabIndex = 0;
+			this.listViewWidgets.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listViewWidgets.FullRowSelect = true;
+			this.listViewWidgets.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+			this.listViewWidgets.Location = new System.Drawing.Point(0, 0);
+			this.listViewWidgets.Name = "listViewWidgets";
+			this.listViewWidgets.Size = new System.Drawing.Size(240, 268);
+			this.listViewWidgets.TabIndex = 1;
+			this.listViewWidgets.View = System.Windows.Forms.View.List;
+			this.listViewWidgets.ItemActivate += new System.EventHandler(this.listViewWidgets_ItemActivate);
 			// 
 			// MainForm
 			// 
@@ -57,18 +61,19 @@ namespace Solvek.Gears.App
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.AutoScroll = true;
 			this.ClientSize = new System.Drawing.Size(240, 268);
-			this.Controls.Add(this.listBoxWidgetManager);
+			this.Controls.Add(this.listViewWidgets);
 			this.Menu = this.mainMenu1;
 			this.Name = "MainForm";
 			this.Text = "Solvek Gears";
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.MenuItem menuItem1;
-		private System.Windows.Forms.ListBox listBoxWidgetManager;
+		private System.Windows.Forms.MenuItem menuItemRefresh;
+		private System.Windows.Forms.ListView listViewWidgets;
 	}
 }
 

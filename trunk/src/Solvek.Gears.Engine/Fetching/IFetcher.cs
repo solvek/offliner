@@ -5,7 +5,7 @@ using Solvek.Offliner.Lib.WidgetDescription;
 
 namespace Solvek.Offliner.Lib.Fetching
 {
-	interface IFetcher
+	public interface IFetcher
 	{
 		Stream Fetch(Source source);
 	}
