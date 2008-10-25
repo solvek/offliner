@@ -32,11 +32,13 @@ namespace Solvek.Gears.App
 			this.mainMenu1 = new System.Windows.Forms.MainMenu();
 			this.menuItemRefresh = new System.Windows.Forms.MenuItem();
 			this.listViewWidgets = new System.Windows.Forms.ListView();
+			this.menuItemSettings = new System.Windows.Forms.MenuItem();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
 			// 
 			this.mainMenu1.MenuItems.Add(this.menuItemRefresh);
+			this.mainMenu1.MenuItems.Add(this.menuItemSettings);
 			// 
 			// menuItemRefresh
 			// 
@@ -54,6 +56,11 @@ namespace Solvek.Gears.App
 			this.listViewWidgets.TabIndex = 1;
 			this.listViewWidgets.View = System.Windows.Forms.View.List;
 			this.listViewWidgets.ItemActivate += new System.EventHandler(this.listViewWidgets_ItemActivate);
+			// 
+			// menuItemSettings
+			// 
+			this.menuItemSettings.Text = "Settings";
+			this.menuItemSettings.Click += new System.EventHandler(this.menuItemSettings_Click);
 			// 
 			// MainForm
 			// 
@@ -74,6 +81,7 @@ namespace Solvek.Gears.App
 
 		private System.Windows.Forms.MenuItem menuItemRefresh;
 		private System.Windows.Forms.ListView listViewWidgets;
+		private System.Windows.Forms.MenuItem menuItemSettings;
 	}
 }
 

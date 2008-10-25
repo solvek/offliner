@@ -2,7 +2,9 @@ using System;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Solvek.Offliner.Lib.WidgetDescription
+using Solvek.Gears.Engine.Processes;
+
+namespace Solvek.Gears.Engine.WidgetDescription
 {
 	[XmlRoot("widget", Namespace = "http://www.solvek.com/gears/widget")]
 	public class Widget
@@ -20,13 +22,44 @@ namespace Solvek.Offliner.Lib.WidgetDescription
 			return widget;
 		}
 
-		[XmlAttribute("name")]
+		[XmlElement("id")]
+		public string Id;
+
+		[XmlElement("name")]
 		public string Name;
 
-		[XmlArray("sources"), XmlArrayItem("source")]
-		public Source[] Sources;
+		[XmlElement("widgetUrl")]
+		public string WidgetUrl;
 
-		[XmlAttribute("transformation")]
-		public string Transformation;
+		[XmlElement("author")]
+		public string Author;
+
+		[XmlElement("authorUrl")]
+		public string AuthorUrl;
+
+		[XmlElement("updateProcess")]
+		public string UpdateProcess;
+
+		[XmlArray("processes"),
+		XmlArrayItem("webRequest", typeof(WebRequest)),
+	   XmlArrayItem("loadXml", typeof(LoadXml)),
+		XmlArrayItem("xmlize", typeof(Xmlize)),
+	   XmlArrayItem("xslTransformation", typeof(XslTransformation))]
+		public BaseProcess[] processesDefinitions;
+
+		[XmlIgnore]
+		public ProcessCollection Processes
+		{
+			get
+			{
+				if (_processes == null)
+				{
+					_processes = new ProcessCollection(processesDefinitions);
+				}
+				return _processes;
+			}
+		}
+
+		private ProcessCollection _processes;
 	}
 }

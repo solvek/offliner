@@ -78,6 +78,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="TestHost.cs" />
     <Compile Include="WidgetTester.cs" />
   </ItemGroup>
   <ItemGroup>

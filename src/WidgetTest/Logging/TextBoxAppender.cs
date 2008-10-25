@@ -17,6 +17,10 @@ namespace NuSoft.Log4Net
             System.IO.StringWriter stringWriter = new System.IO.StringWriter(System.Globalization.CultureInfo.InvariantCulture);
             Layout.Format(stringWriter, LoggingEvent);
             _textBox.AppendText(stringWriter.ToString());
+			if (LoggingEvent.ExceptionObject != null)
+			{
+				_textBox.AppendText(LoggingEvent.ExceptionObject.ToString() + Environment.NewLine);
+			}
         }
 
         public TextBox TextBox

@@ -1,96 +1,37 @@
 using System;
 using System.IO;
-using System.Text;
-using System.Xml;
-using System.Xml.Xsl;
 
 using log4net;
 
-using Solvek.Offliner.Lib.Fetching;
-using Solvek.Offliner.Lib.WidgetDescription;
+using Solvek.Gears.Engine.Processes;
+using Solvek.Gears.Engine.WidgetDescription;
 
-namespace Solvek.Offliner.Lib.Runtime
+namespace Solvek.Gears.Engine.Runtime
 {
 	public sealed class WidgetProcessor
 	{
-		public WidgetProcessor(string homePath, bool debugMode)
+		public WidgetProcessor(string homePath)
 		{
 			_homePath = homePath;			
-			_debugMode = debugMode;
-
 			LoadWidget();
 		}
 		
 		public void Update()
 		{
 			_log.InfoFormat("Started update for widget {0}", _widget.Name);
-			XmlDocument xml = new XmlDocument();
-			XmlNode rootNode = xml.CreateElement("resultSet");
-			xml.AppendChild(rootNode);
-
-			foreach (Source source in _widget.Sources)
+			try
 			{
-				Stream stream = Fetcher.Fetch(source);
-				
-				if (_debugMode)
-				{
-					using (BinaryReader r = new BinaryReader(stream))
-					{
-						
-						const int bufSize = 4048;
-						byte[] buf = new byte[bufSize];
-
-						MemoryStream mem = new MemoryStream();
-
-						int curSize;
-						while ((curSize = r.Read(buf, 0, bufSize)) > 0)
-						{
-							mem.Write(buf, 0, curSize);
-						}
-
-						mem.Seek(0, SeekOrigin.Begin);
-						string dataFile = WidgetStateFilePath("RemoteData.bin");
-						_log.DebugFormat("Retrieved data is writing to file {0}", dataFile);
-						FileStream file = new FileStream(dataFile, FileMode.Create);
-						mem.WriteTo(file);
-						file.Close();
-
-						mem.Seek(0, SeekOrigin.Begin);
-						stream = mem;
-					}
-				}
-
-				StreamReader reader = new StreamReader(stream);
-
-
-				XmlReader xmlR = source.Filter.Apply(reader);
-
-				XmlNode resultNode = xml.CreateElement("result");
-				resultNode.InnerXml = xmlR.ReadOuterXml();
-
-				rootNode.AppendChild(resultNode);
-
-				reader.Close();
+				_widget.Processes.ResetResults();
+				_widget.Processes.ExecuteProcess(_widget.UpdateProcess);
 			}
-
-			if (_debugMode)
+			catch (Exception ex)
 			{
-				xml.Save(WidgetStateFilePath("xmlResult.xml"));
+				_log.Error("Failed to update widget "+_widget.Name, ex);
+				throw;
 			}
-
-			XslCompiledTransform xslt = new XslCompiledTransform();
-			xslt.Load(WidgetSourceFilePath(_widget.Transformation));
-
-			using (StreamWriter result = new StreamWriter(ResultHtmlPath, false, Encoding.UTF8))
-			using (XmlNodeReader nReader = new XmlNodeReader(xml))
-			{
-				xslt.Transform(nReader, result);
-				result.Close();
-				nReader.Close();
-			}
-
 
 			_lastUpdated = DateTime.UtcNow;
+			_log.InfoFormat("Finished updating of widget {0}", _widget.Name);
 		}
 
 		public DateTime LastUpdated
@@ -100,7 +41,7 @@ namespace Solvek.Offliner.Lib.Runtime
 
 		public string ResultHtmlPath
 		{
-			get { return WidgetStateFilePath("index.html"); }
+			get { return WidgetFilePath("index.html"); }
 		}
 
 		public override string ToString()
@@ -108,9 +49,24 @@ namespace Solvek.Offliner.Lib.Runtime
 			return _widget.Name;
 		}
 
+		internal string WidgetFilePath(string fileName)
+		{
+			return Path.Combine(this._homePath, fileName);
+		}
+
+		internal Widget Widget
+		{
+			get{return _widget;}
+		}
+
 		private void LoadWidget()
 		{
-			_widget = Widget.LoadWidget(WidgetSourceFilePath("widget.xml"));
+			_widget = Widget.LoadWidget(WidgetFilePath("widget.xml"));
+			foreach (BaseProcess proc in _widget.Processes)
+			{
+				proc.Context = this;
+			}
+			_widget.processesDefinitions = null;
 			//_widget = new Widget();
 			//_widget.Name = "Test";
 			//Source src = new Source();
@@ -125,22 +81,9 @@ namespace Solvek.Offliner.Lib.Runtime
 			//sr.Serialize(writer, _widget);
 		}
 
-		private string WidgetStateFilePath(string fileName)
-		{
-			return Path.Combine(_homePath, "_sg_" + fileName);
-		}
-
-		private string WidgetSourceFilePath(string fileName)
-		{
-			return Path.Combine(_homePath, fileName);
-		}
-
 		private DateTime _lastUpdated;
 		private Widget _widget;
 		private readonly string _homePath;
-		private readonly bool _debugMode;
-
-		public static IFetcher Fetcher = new WebFetcher();
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(WidgetProcessor));
 	}

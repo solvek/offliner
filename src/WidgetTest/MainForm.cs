@@ -79,9 +79,17 @@ namespace Solvek.Offliner.WidgetTest
 
 		private void toolStripButtonUpdate_Click(object sender, EventArgs e)
 		{
-			_wTester.UpdateWidget();
-			webBrowserWidget.Url = new Uri(_wTester.ResultHtmlPath);
-			webBrowserWidget.Refresh();
+			try
+			{
+				_wTester.UpdateWidget();
+				webBrowserWidget.Url = new Uri(_wTester.ResultHtmlPath);
+				webBrowserWidget.Refresh();
+				tabMains.SelectTab(tabPageWidget);
+			}
+			catch (Exception)
+			{
+				tabMains.SelectTab(tabPageLog);
+			}
 		}		
 
 		private void toolStripButtonLoadWidget_Click(object sender, EventArgs e)
