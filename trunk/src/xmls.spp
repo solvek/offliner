@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
 	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml">
-		<File FilePath="C:\Documents and Settings\adamchuk\Application Data\Solvek\GearsWT\widgets\Test Widget\xmlResult.xml" HomeFolder="Yes"/>
-		<File FilePath="Widgets\NBUCurrencies\widget.xml" HomeFolder="Yes"/>
+		<File FilePath="Solvek.Gears.App\Widgets\nburates@solvek.com\widget.xml" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
-		<File FilePath="Widgets\NBUCurrencies\MakeHtml.xslt" HomeFolder="Yes"/>
+		<File FilePath="Solvek.Gears.App\Widgets\nburates@solvek.com\MakeHtml.xslt" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery"/>
 	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>

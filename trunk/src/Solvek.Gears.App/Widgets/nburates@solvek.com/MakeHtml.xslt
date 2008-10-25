@@ -7,7 +7,7 @@
 					<title>Офіційні курси валют</title>
 				</head>
 				<body>
-					<xsl:apply-templates select="/resultSet/result/html/body/table/tbody/tr/td/div"/>
+					<xsl:apply-templates select="/html/body/table/tbody/tr/td/div"/>
 				</body>
 			</html>
 		</xsl:template>

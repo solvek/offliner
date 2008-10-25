@@ -21,7 +21,8 @@ namespace System.Xml.Xsl
             DOMDocument toTransform = new DOMDocumentClass();
         	string xml = reader.ReadOuterXml();
 			toTransform.loadXML(xml);
-			writer.WriteString(toTransform.transformNode(myXsl));
+        	string transformed = toTransform.transformNode(myXsl);
+			writer.WriteString(transformed);
         }
 
 		readonly DOMDocument myXsl = new DOMDocumentClass();

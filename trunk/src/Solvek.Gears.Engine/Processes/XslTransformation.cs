@@ -23,7 +23,8 @@ namespace Solvek.Gears.Engine.Processes
 			using (XmlWriter result = new XmlTextWriter(mem, Encoding.UTF8))
 			using (XmlNodeReader nReader = new XmlNodeReader(xml))
 			{
-				string x = readTransform.ReadOuterXml();
+				readTransform.MoveToContent();
+				nReader.MoveToContent();
 				xslt.Load(readTransform);
 				xslt.Transform(nReader, result);
 				mem.Seek(0, SeekOrigin.Begin);
