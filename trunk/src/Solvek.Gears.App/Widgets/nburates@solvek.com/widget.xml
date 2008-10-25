@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
-<widget
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://www.solvek.com/gears/widget"
-	name="NBU Rates"
-	transformation="MakeHtml.xslt">
-		<sources>
-			<source 
-				url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx"
-				filter="Solvek.Offliner.Lib.Filters.HtmlToXhtmlFilter"/>
-		</sources>
+<widget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.solvek.com/gears/widget">
+	<id>nburates@solvek.com</id>
+	<name>NBU Rates</name>
+	<widgetUrl>http://www.solvek.com/gears</widgetUrl>
+	<author>Sergi Adamchuk</author>
+	<authorUrl>http://www.solvek.com</authorUrl>
+	<updateProcess>IndexXHTML</updateProcess>
+
+	<processes>
+		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx"/>
+		<xmlize id="MakeXml" input="LoadData"/>
+		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
+		<xslTransformation id="IndexXHTML" output="index.html">
+			<input id="MakeXml"/>
+			<input id="LoadXslt"/>
+		</xslTransformation>
+	</processes>
 </widget>

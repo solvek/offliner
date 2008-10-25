@@ -117,57 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>28, 16</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripButtonLoadWidget.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAb1JREFUOE+Fk0tL
-        gkEUhkftfqWF+0QJ+h0V0WVRQpSJZFAQtOq6KYgIaxFIREZIFJXlqj8QQYv+QJuifkGpWWmbNs70njPz
-        6ReoDTycOfOd953r5xD/NwdK7FgKhQ5RtZHQKXZRGANnIMGiJu4LUW+pdaEQLhuUO8VGsbAf+QAYFEmM
-        nfP4OBmQ2PV03a0seAbtXmPoQ2wELSy8ACdsECQDFsufhyKUY7zdGJHQDpkPAz8ICCou5BNK5i8Rr5T8
-        TjL2FdlW1mxMyUT32SC7oeTHpip8bIEI+hHEbROpv8WGEIyANrMi2mKdNkiFVSE9W3bWciuhsftT3xif
-        E+//dUjJNz8byHTYMG1iSMlUgL9zHbiLex4hHgWd2iAVLInfF5TMroBVHSnPzMNspli3POWOQtzLt8IG
-        mbmSAc5CfmL/nzs6Up5dg9Ei190eel8gnARdfBbWHnnpJPiKgn0lcwc6Us5G6zzJUsi9ByG9i1ZQ+9eA
-        inMxEMe1HutIOY3jJmyz+yBuAM6iQaXTtsZvjrzPZu89vHeaXb9ifhB0JROAnmYlAubgPHx9+t/hRgmZ
-        0NPtqAJ9p5lp6fSP8Oy/tfuTi0AOEpEAAAAASUVORK5CYII=
-</value>
+  <data name="_useProxy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>348, 40</value>
   </data>
-  <data name="toolStripButtonUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAr1JREFUOE91k2tI
-        k1EYx1/RLmqIDrsoKgoO2xAjCTVI96VPXaAPUR+SxLBUNjVNwppkSR9SQrJEFO900ywvQxNBJQxsl9xI
-        zem25j2d01XqZlr59Dxn7oXAXvixs+f5///nvOc9x41zPm4SicQ9+U7FqX4TV6accQRPLf9ijTD/PdyJ
-        cG/byZCNB0U3r9RqNBo7ln8jfxBg5oKCgt2FbWaFIFMF6U9N0PPZBnO2dQaNqSbIVENph8kok90IQ48X
-        4kFeDmf2KHxjVgTkaJh4aWVjR6hHmkedhtlj8fHBfMiLvvHTfhkq6B62wcL3n4z5b+v82FWjX9LQKutb
-        e19igD/iySVW6qdT6owwu7zOk1XRD+8GjTCz5PinThrSpjWMbwqFogQM8OMibg9C66AVJq0Onuh7nyD6
-        rg7OF/VB+/sRMFvW+B5pxfk6kGblyjEgkPNKV8LQ9AqYFuw8B65rwIka9iNxt7qhuVfH+qQlT0l5VTUG
-        iFmAdvIHjH1d5fGRqsBXpgIfqRJCUtshr7QZ1GNzrE9a8jwsq6vHgFj2Co1KCxjm1xhGRCBTwtGMV/D4
-        WReMTCyxGkH9JpUFDsu1IM2RF2NAHHepbHT5crUBvljsMLHoYDR1DYBpfpX/76qbF+2QhNqUiqGtcFFk
-        GgZEcTVvddm++BnbtM6NnPoP1GtHDX3yho4PajRfQIK5ILFYUPhabzyYrWGCnUKoptBZ4RBqSjr1DnHk
-        kVQ0SxABHeW9SUmpofdbRmcoPbnGAC0frTA6t8qgMdWoR+Yz5y7moecsEoB4U4A7HcuYGElQ6fOexsQa
-        /aYoX8t2mqDxtcrhrTrFgGZ7ZjLTUd6H7GKXafti0AXxDxUKE67iFhc9qaouKa9tyMiVF0c4N4zemZZN
-        M7vM5GWPK8QTx35IICJGYpHjSNT2rPTOtGyamZn/Aq+PRcvj2SxkAAAAAElFTkSuQmCC
-</value>
+  <data name="_useProxy.Text" xml:space="preserve">
+    <value>Використовувати проксі</value>
   </data>
-  <data name="toolStripButtonClearLog.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAadJREFUOE+lk9sr
-        RFEYxcntgReR4l/xVyiFkkuUe25FCSmleJIHXryI3AbjllFCyJNb8YA3lwfM9Zwzx2gmWr61OdMMMyi7
-        fu1z9rfW2t+uvRMTPkbS6OHz6+d33Kk+Pz1TiqFP3mSGJU4e3DYRDAYRCoViMrhjgoghW0gXkoVEKyC1
-        x2EgEAjEpdfhx+nNC6gTU46QIaRYAWltKzr8fj9M04xJ+4oBQh2JCFEZabU2DbquwzCMKLi2ebGK28cb
-        aJqmoFY8BUJWuIOKmY8iocnCfjaPsYNh9K13wOfzwePxgFoxFgm5PwYsns5gZG9IcXC9+zWgWMx54YCS
-        SQ1er1eJ2IXteArdG63oWmvB/tWOWmfd7XaDWjFGBxROaHC5XArb0Ryal6vQsFgOx/mqMrJ1mp1OJ6iN
-        G/CweYK71kl0dY5j93JLmf8UwLa4u716APf9djztX4TNkQHUxDxC2bSm2iTWrjy3hRXCOrXfjlA5q6sz
-        WuZ4MzXUfg1IrZ7TUWPTUbego3HJUDRFwH/WqKFWAkoi7wHvNF8aL0eVUPsL1JQKfFj/G++jkSVU0AG1
-        nwAAAABJRU5ErkJggg==
-</value>
+  <data name="_proxyAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 96</value>
   </data>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>127, 16</value>
-  </metadata>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 40</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Проксі (хост:порт)</value>
+  </data>
+  <data name="_reqAuthentication.Text" xml:space="preserve">
+    <value>Потрібна авторизація</value>
+  </data>
+  <data name="_userName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 236</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Користувач</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="_password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 312</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Налаштування</value>
+  </data>
 </root>

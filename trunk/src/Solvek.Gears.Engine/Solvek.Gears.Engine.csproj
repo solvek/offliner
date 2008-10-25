@@ -52,6 +52,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -65,18 +67,31 @@
       <Link>SgmlReader\SgmlReader.cs</Link>
     </Compile>
     <Compile Include="Exceptions\WidgetLoadingException.cs" />
-    <Compile Include="Fetching\IFetcher.cs" />
-    <Compile Include="Fetching\WebFetcher.cs" />
-    <Compile Include="Filters\EmptizeFilter.cs" />
-    <Compile Include="Filters\HtmlToXhtmlFilter.cs" />
-    <Compile Include="Filters\XmlFilter.cs" />
+    <Compile Include="Host\HostInfo.cs" />
+    <Compile Include="Processes\BaseProcess.cs" />
+    <Compile Include="Processes\DataType.cs" />
+    <Compile Include="Processes\Input.cs" />
+    <Compile Include="Processes\LoadXml.cs" />
+    <Compile Include="Processes\ProcessCollection.cs" />
+    <Compile Include="Processes\WebRequest.cs" />
+    <Compile Include="Processes\Xmlize.cs" />
+    <Compile Include="Processes\XslTransformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Runtime\WidgetProcessor.cs" />
     <Compile Include="Utilities\XslCompiledTransform.cs" />
-    <Compile Include="WidgetDescription\IFilter.cs" />
-    <Compile Include="WidgetDescription\Source.cs" />
-    <Compile Include="WidgetDescription\StringPair.cs" />
     <Compile Include="WidgetDescription\Widget.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

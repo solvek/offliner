@@ -10,20 +10,18 @@ namespace System.Xml.Xsl
 		{
 		}
 
-    	public void Load(string filePath)
+    	public void Load(XmlReader reader)
         {
-			using (StreamReader file = new StreamReader(filePath))
-			{
-				myXsl.loadXML(file.ReadToEnd());
-				file.Close();
-			}
+			string xslt = reader.ReadOuterXml();
+			myXsl.loadXML(xslt);
         }
 
-        public void Transform(XmlReader reader, StreamWriter writer)
+        public void Transform(XmlReader reader, XmlWriter writer)
         {
             DOMDocument toTransform = new DOMDocumentClass();
-            toTransform.loadXML(reader.ReadOuterXml());
-			writer.Write(toTransform.transformNode(myXsl));
+        	string xml = reader.ReadOuterXml();
+			toTransform.loadXML(xml);
+			writer.WriteString(toTransform.transformNode(myXsl));
         }
 
 		readonly DOMDocument myXsl = new DOMDocumentClass();

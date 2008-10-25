@@ -34,8 +34,6 @@ namespace Solvek.Offliner.WidgetTest
 			this.tabMains = new System.Windows.Forms.TabControl();
 			this.tabPageWidget = new System.Windows.Forms.TabPage();
 			this.webBrowserWidget = new System.Windows.Forms.WebBrowser();
-			this.tabPageXml = new System.Windows.Forms.TabPage();
-			this.textBoxXml = new System.Windows.Forms.TextBox();
 			this.tabPageLog = new System.Windows.Forms.TabPage();
 			this.textBoxLog = new System.Windows.Forms.TextBox();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -46,7 +44,6 @@ namespace Solvek.Offliner.WidgetTest
 			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.tabMains.SuspendLayout();
 			this.tabPageWidget.SuspendLayout();
-			this.tabPageXml.SuspendLayout();
 			this.tabPageLog.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -75,7 +72,6 @@ namespace Solvek.Offliner.WidgetTest
 			// tabMains
 			// 
 			this.tabMains.Controls.Add(this.tabPageWidget);
-			this.tabMains.Controls.Add(this.tabPageXml);
 			this.tabMains.Controls.Add(this.tabPageLog);
 			this.tabMains.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabMains.Location = new System.Drawing.Point(0, 58);
@@ -104,26 +100,6 @@ namespace Solvek.Offliner.WidgetTest
 			this.webBrowserWidget.Name = "webBrowserWidget";
 			this.webBrowserWidget.Size = new System.Drawing.Size(793, 406);
 			this.webBrowserWidget.TabIndex = 0;
-			// 
-			// tabPageXml
-			// 
-			this.tabPageXml.Controls.Add(this.textBoxXml);
-			this.tabPageXml.Location = new System.Drawing.Point(4, 22);
-			this.tabPageXml.Name = "tabPageXml";
-			this.tabPageXml.Size = new System.Drawing.Size(799, 412);
-			this.tabPageXml.TabIndex = 2;
-			this.tabPageXml.Text = "XML";
-			this.tabPageXml.UseVisualStyleBackColor = true;
-			// 
-			// textBoxXml
-			// 
-			this.textBoxXml.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.textBoxXml.Location = new System.Drawing.Point(0, 0);
-			this.textBoxXml.Multiline = true;
-			this.textBoxXml.Name = "textBoxXml";
-			this.textBoxXml.ReadOnly = true;
-			this.textBoxXml.Size = new System.Drawing.Size(799, 412);
-			this.textBoxXml.TabIndex = 0;
 			// 
 			// tabPageLog
 			// 
@@ -211,8 +187,6 @@ namespace Solvek.Offliner.WidgetTest
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.tabMains.ResumeLayout(false);
 			this.tabPageWidget.ResumeLayout(false);
-			this.tabPageXml.ResumeLayout(false);
-			this.tabPageXml.PerformLayout();
 			this.tabPageLog.ResumeLayout(false);
 			this.tabPageLog.PerformLayout();
 			this.panel1.ResumeLayout(false);
@@ -230,11 +204,9 @@ namespace Solvek.Offliner.WidgetTest
 		private System.Windows.Forms.Button buttonBrowse;
 		private System.Windows.Forms.TabControl tabMains;
 		private System.Windows.Forms.TabPage tabPageWidget;
-		private System.Windows.Forms.TabPage tabPageXml;
 		private System.Windows.Forms.TabPage tabPageLog;
 		private System.Windows.Forms.TextBox textBoxLog;
 		private System.Windows.Forms.WebBrowser webBrowserWidget;
-		private System.Windows.Forms.TextBox textBoxXml;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton toolStripButtonClearLog;
