@@ -1,7 +1,11 @@
 using System;
 using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Resources;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -21,18 +25,49 @@ namespace Solvek.Gears.App
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			LoadConfig();
+			Properties.Resources.Culture = new CultureInfo(_config.Loacalization);
 			
 			string widgetsPath = GetAppFolderItem("Widgets");
 			WidgetProcessor[] procs = this._manager.LoadProcessors(widgetsPath);
 			foreach (WidgetProcessor proc in procs)
 			{
-				listViewWidgets.Items.Add(new WidgetListItem(proc));
+				AppendProcess(proc);
+			}
+			if (CurrentAutoScaleDimensions.Width == 192)
+			{
+				imageListIcons.ImageSize = new Size(24, 24);
 			}
 		}
 
 		private void menuItemRefresh_Click(object sender, EventArgs e)
 		{
-			_manager.UpdateAll();
+			menuItemRefresh.Enabled = false;
+			listViewWidgets.BeginUpdate();
+			foreach (WidgetListItem wli in listViewWidgets.Items)
+			{
+				wli.Processor.State.Status = Status.Updating;
+				wli.RedrawStatus();
+			}
+			listViewWidgets.EndUpdate();
+			listViewWidgets.Refresh();
+
+			foreach (WidgetListItem wli in listViewWidgets.Items)
+			{
+				WidgetProcessor processor = wli.Processor;
+				try
+				{
+					processor.Update();
+				}
+				catch (ApplicationException ex)
+				{
+					MessageBox.Show(String.Format("Failed to update data for widget {0}. Error: {1}", processor, ex.Message));
+				}
+				wli.RedrawStatus();
+				listViewWidgets.Refresh();
+			}
+
+			menuItemRefresh.Enabled = true;
+
 		}
 
 		private void listViewWidgets_ItemActivate(object sender, EventArgs e)
@@ -40,7 +75,12 @@ namespace Solvek.Gears.App
 			foreach(int idx in listViewWidgets.SelectedIndices)
 			{
 				WidgetListItem item = (WidgetListItem)listViewWidgets.Items[idx];
+				if (!File.Exists(item.Processor.ResultHtmlPath))
+				{
+					continue;
+				}
 				Process.Start(item.Processor.ResultHtmlPath, String.Empty);
+				break;
 			}
 		}
 
@@ -48,11 +88,27 @@ namespace Solvek.Gears.App
 		{
 			Settings dlg = new Settings();
 			dlg.SetConfig(_config);
-			if (dlg.ShowDialog() == DialogResult.OK)
+			if (dlg.ShowDialog() != DialogResult.OK)
 			{
-				_config = dlg.GetConfig();
-				SaveConfig();
+				return;
 			}
+			this._config = dlg.GetConfig();
+			this.SaveConfig();
+		}
+
+		private void AppendProcess(WidgetProcessor proc)
+		{
+			int index = this.listViewWidgets.Items.Count;
+			using(FileStream stream = new FileStream(proc.WidgetFilePath(proc.Widget.Icon), FileMode.Open))
+			{
+				Image image = new Bitmap(stream);
+				imageListIcons.Images.Add(image);
+				stream.Close();
+			}
+			
+			WidgetListItem wli = new WidgetListItem(proc);
+			wli.ImageIndex = index;
+			this.listViewWidgets.Items.Add(wli);
 		}
 
 		private void LoadConfig()
@@ -65,6 +121,8 @@ namespace Solvek.Gears.App
 				_config = (Config)dsr.Deserialize(reader);
 
 				reader.Close();
+
+				_manager.Host.PopulateConfig(_config);
 			}
 			catch (Exception ex)
 			{
@@ -101,6 +159,7 @@ namespace Solvek.Gears.App
 				: base(proc.ToString())
 			{
 				this._proc = proc;
+				_subItemStatus = SubItems.Add(proc.State.GetStatusText());
 			}
 
 			public WidgetProcessor Processor
@@ -108,7 +167,13 @@ namespace Solvek.Gears.App
 				get { return _proc; }
 			}
 
+			public void RedrawStatus()
+			{
+				_subItemStatus.Text = _proc.State.GetStatusText();
+			}
+
 			private readonly WidgetProcessor _proc;
+			private readonly ListViewSubItem _subItemStatus;
 		}
 	}
 }

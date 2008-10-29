@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <log4net>
 	<appender name="file" type="log4net.Appender.RollingFileAppender">
-		<file value="\Storage Card\Sergi\Projects\Offliner\src\Solvek.Gears.App\logs\log.txt" />
+		<file value="logs\log.txt" />
 		<appendToFile value="false" />
 		<rollingStyle value="Size" />
 		<maximumFileSize value="5MB" />

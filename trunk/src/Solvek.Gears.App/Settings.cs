@@ -17,6 +17,7 @@ namespace Solvek.Gears.App
 			_reqAuthentication.Checked = config.RequireAuthentication;
 			_userName.Text = config.UserName;
 			_password.Text = config.Password;
+			comboBoxLanguage.SelectedValue = config.Loacalization;
 		}
 
 		public Config GetConfig()
@@ -27,6 +28,7 @@ namespace Solvek.Gears.App
 			config.RequireAuthentication = _reqAuthentication.Checked;
 			config.UserName = _userName.Text;
 			config.Password = _password.Text;
+			config.Loacalization = comboBoxLanguage.SelectedValue.ToString();
 
 			return config;
 		}
@@ -51,12 +53,30 @@ namespace Solvek.Gears.App
 			this.ActualizeEnabling();
 		}
 
+		private void Settings_Load(object sender, EventArgs e)
+		{
+			comboBoxLanguage.DataSource = new LangInfo[] { new LangInfo("en-US", "English"), new LangInfo("uk-UA", "Українська (Ukrainian)") };
+		}
+
 		private void ActualizeEnabling()
 		{
 			_proxyAddress.Enabled = _useProxy.Checked;
 			this._reqAuthentication.Enabled = _useProxy.Checked;
 			_userName.Enabled = _useProxy.Checked && this._reqAuthentication.Checked;
 			_password.Enabled = _useProxy.Checked && this._reqAuthentication.Checked;
+		}
+
+		private struct LangInfo
+		{
+			public LangInfo(string code, string language)
+			{
+				Code = code;
+				Language = language;
+			}
+#pragma warning disable 219
+			public string Code;
+			public string Language;
+#pragma warning restore 219
 		}
 	}
 }

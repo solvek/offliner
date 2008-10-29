@@ -5,6 +5,8 @@
 			<html>
 				<head>
 					<title>Офіційні курси валют</title>
+					<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+					<link type="text/css" rel="stylesheet" href="../common/common.css" />
 				</head>
 				<body>
 					<xsl:apply-templates select="/html/body/table/tbody/tr/td/div"/>
@@ -12,11 +14,31 @@
 			</html>
 		</xsl:template>
 		<xsl:template match="form[@id='tableForm']">
-			<p><img src="nbu.png" alt="НБУ лого"/>Дані на <xsl:value-of select="p/br/span"/></p>
-			<ul>
+			<div id="titleBar">
+				<div id="widgetTitle">
+					<img src="nbu16.png" alt="НБУ лого"/><span>Курси НБУ</span>
+				</div>
+				<div id="helpLink">
+					<img src="../common/help.png" alt="Допомога"/>
+				</div>
+			</div>
+			<p>Дані на <xsl:value-of select="p/br/span"/></p>
+			<table>
 				<xsl:for-each select="table/tr[@class='G1' or @class='w1']">
-					<li><xsl:value-of select="td[3]"/>&#160;<xsl:value-of select="td[4]"/> = <xsl:value-of select="td[5]"/> грн</li>
+					<tr>
+						<xsl:choose>
+							<xsl:when test="position() mod 2 = 1">
+								<xsl:attribute name="class">evenRow</xsl:attribute>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:attribute name="class">oddRow</xsl:attribute>
+							</xsl:otherwise>
+						</xsl:choose>
+						<td><xsl:value-of select="td[3]"/></td>
+						<td><xsl:value-of select="td[4]"/></td>
+						<td><xsl:value-of select="td[5]"/></td>
+					</tr>
 				</xsl:for-each>
-			</ul>
+			</table>
 		</xsl:template>
 </xsl:stylesheet>

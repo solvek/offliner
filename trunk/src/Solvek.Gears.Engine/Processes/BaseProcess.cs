@@ -5,8 +5,6 @@ using System.Xml;
 using System.Xml.Serialization;
 
 using log4net;
-
-using Solvek.Gears.Engine.Host;
 using Solvek.Gears.Engine.Runtime;
 
 namespace Solvek.Gears.Engine.Processes
@@ -61,7 +59,7 @@ namespace Solvek.Gears.Engine.Processes
 		{
 			if (inputs.Length != expected)
 			{
-				throw new ApplicationException(String.Format(HostInfo.GetString("Errors_Process_InputsAmount"), 
+				throw new ApplicationException(String.Format(Properties.Resources.Errors_Process_InputsAmount, 
 					expected,
 					(inputs.Length == 1) ? "" : "s",
 					inputs.Length));
@@ -78,6 +76,7 @@ namespace Solvek.Gears.Engine.Processes
 				}
 
 				DataType t = types[i];
+				Type type = inputs[i].GetType();
 
 				bool valid = false;
 
@@ -91,15 +90,20 @@ namespace Solvek.Gears.Engine.Processes
 					valid = true;
 				}
 
+				if (((t & DataType.RowData) != 0) && type.IsArray)
+				{
+					valid = true;
+				}
+
 				if (valid)
 				{
 					continue;
 				}
 				if (i == 0 && inputs.Length == 1)
 				{
-					throw new ApplicationException(String.Format(HostInfo.GetString("Errors_Process_WrongType"), t));
+					throw new ApplicationException(String.Format(Properties.Resources.Errors_Process_WrongType, t));
 				}
-				throw new ApplicationException(String.Format(HostInfo.GetString("Errors_Process_WrongTypeN"), i + 1, t));
+				throw new ApplicationException(String.Format(Properties.Resources.Errors_Process_WrongTypeN, i + 1, t));
 			}
 		}
 
@@ -107,12 +111,17 @@ namespace Solvek.Gears.Engine.Processes
 		{
 			if (inputs.Length > 0)
 			{
-				throw new ApplicationException(String.Format(HostInfo.GetString("Errors_Process_NoInputAllowed"), inputs.Length));
+				throw new ApplicationException(String.Format(Properties.Resources.Errors_Process_NoInputAllowed, inputs.Length));
 			}
 		}
 		#endregion
 
 		#region Outputters
+		protected static void OutputBinary(byte[] buf, Stream stream)
+		{
+			stream.Write(buf, 0, buf.Length);
+		}
+
 		protected static void OutputString(string s, Stream stream)
 		{
 			using (StreamWriter writer = new StreamWriter(stream))

@@ -1,34 +1,25 @@
 using System;
 using System.IO;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace Solvek.Gears.Engine.Processes
 {
-	[XmlRoot("loadXml")]
-	public class LoadXml : BaseProcess
+	[XmlRoot("concatXmls")]
+	public class ConcatXmls : BaseProcess
 	{
-		public LoadXml()
-		{}
-
-		[XmlAttribute("path")]
-		public string XmlPath;
-
 		protected override object ExecuteInternal(object[] inputs)
 		{
-			XmlDocument doc = new XmlDocument();
-			doc.Load(Context.WidgetFilePath(XmlPath));
-			return doc;
+			throw new System.NotImplementedException();
 		}
 
 		protected override void ValidateInputs(object[] inputs)
 		{
-			ValidateNoInputs(inputs);
+			throw new System.NotImplementedException();
 		}
 
 		protected override void Output(object obj, Stream stream)
 		{
-			OutputString((string)obj, stream);
+			throw new System.NotImplementedException();
 		}
 	}
 }

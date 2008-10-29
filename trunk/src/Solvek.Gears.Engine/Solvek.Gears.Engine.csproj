@@ -69,8 +69,12 @@
     <Compile Include="Exceptions\WidgetLoadingException.cs" />
     <Compile Include="Host\HostInfo.cs" />
     <Compile Include="Processes\BaseProcess.cs" />
+    <Compile Include="Processes\BinaryToString.cs" />
+    <Compile Include="Processes\ConcatXmls.cs" />
     <Compile Include="Processes\DataType.cs" />
+    <Compile Include="Processes\GetWidgetState.cs" />
     <Compile Include="Processes\Input.cs" />
+    <Compile Include="Processes\LoadFile.cs" />
     <Compile Include="Processes\LoadXml.cs" />
     <Compile Include="Processes\ProcessCollection.cs" />
     <Compile Include="Processes\WebRequest.cs" />
@@ -82,7 +86,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Runtime\Status.cs" />
     <Compile Include="Runtime\WidgetProcessor.cs" />
+    <Compile Include="Runtime\WidgetState.cs" />
     <Compile Include="Utilities\XslCompiledTransform.cs" />
     <Compile Include="WidgetDescription\Widget.cs" />
   </ItemGroup>

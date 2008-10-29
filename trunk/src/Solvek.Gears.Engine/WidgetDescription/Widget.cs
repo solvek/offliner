@@ -7,6 +7,7 @@ using Solvek.Gears.Engine.Processes;
 namespace Solvek.Gears.Engine.WidgetDescription
 {
 	[XmlRoot("widget", Namespace = "http://www.solvek.com/gears/widget")]
+	[XmlInclude(typeof(LoadFile))]
 	public class Widget
 	{
 		public Widget()
@@ -15,11 +16,13 @@ namespace Solvek.Gears.Engine.WidgetDescription
 		
 		public static Widget LoadWidget(string path)
 		{
-			StreamReader reader = new StreamReader(path);
-			XmlSerializer dsr = new XmlSerializer(typeof(Widget));
-			Widget widget = (Widget)dsr.Deserialize(reader);
-			reader.Close();
-			return widget;
+			using (StreamReader reader = new StreamReader(path))
+			{
+				XmlSerializer dsr = new XmlSerializer(typeof(Widget));
+				Widget widget = (Widget) dsr.Deserialize(reader);
+				reader.Close();
+				return widget;
+			}
 		}
 
 		[XmlElement("id")]
@@ -40,26 +43,15 @@ namespace Solvek.Gears.Engine.WidgetDescription
 		[XmlElement("updateProcess")]
 		public string UpdateProcess;
 
-		[XmlArray("processes"),
+		[XmlElement("icon")]
+		public string Icon;
+
+		/*[XmlArray("processes"),
 		XmlArrayItem("webRequest", typeof(WebRequest)),
-	   XmlArrayItem("loadXml", typeof(LoadXml)),
+		XmlArrayItem("loadXml", typeof(LoadXml)),
 		XmlArrayItem("xmlize", typeof(Xmlize)),
-	   XmlArrayItem("xslTransformation", typeof(XslTransformation))]
-		public BaseProcess[] processesDefinitions;
-
-		[XmlIgnore]
-		public ProcessCollection Processes
-		{
-			get
-			{
-				if (_processes == null)
-				{
-					_processes = new ProcessCollection(processesDefinitions);
-				}
-				return _processes;
-			}
-		}
-
-		private ProcessCollection _processes;
+		XmlArrayItem("xslTransformation", typeof(XslTransformation))]*/
+		[XmlElement("processes")]
+		public ProcessCollection Processes;
 	}
 }
