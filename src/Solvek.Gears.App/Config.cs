@@ -22,6 +22,7 @@ namespace Solvek.Gears.App
 		public bool RequireAuthentication;
 		public string UserName;
 		public string EncryptedPassword;
+		public string Loacalization = "uk-UA";
 
 		[XmlIgnore]
 		public string Password

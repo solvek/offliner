@@ -1,6 +1,5 @@
 using System;
 using MSXML2;
-using System.IO;
 
 namespace System.Xml.Xsl
 {
@@ -16,13 +15,13 @@ namespace System.Xml.Xsl
 			myXsl.loadXML(xslt);
         }
 
-        public void Transform(XmlReader reader, XmlWriter writer)
+        public string Transform(XmlReader reader)
         {
             DOMDocument toTransform = new DOMDocumentClass();
         	string xml = reader.ReadOuterXml();
 			toTransform.loadXML(xml);
         	string transformed = toTransform.transformNode(myXsl);
-			writer.WriteString(transformed);
+			return transformed;
         }
 
 		readonly DOMDocument myXsl = new DOMDocumentClass();

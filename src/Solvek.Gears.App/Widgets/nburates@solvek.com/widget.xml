@@ -1,19 +1,24 @@
 <?xml version="1.0"?>
 <widget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.solvek.com/gears/widget">
 	<id>nburates@solvek.com</id>
-	<name>NBU Rates</name>
+	<name>Курси НБУ</name>
 	<widgetUrl>http://www.solvek.com/gears</widgetUrl>
 	<author>Sergi Adamchuk</author>
 	<authorUrl>http://www.solvek.com</authorUrl>
-	<updateProcess>IndexXHTML</updateProcess>
+	<updateProcess>IndexHTML</updateProcess>
+	<icon>nbu.png</icon>
 
+	 
 	<processes>
 		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx"/>
-		<xmlize id="MakeXml" input="LoadData"/>
+		<!--<loadFile id="LoadData" path="webresult.bin"/>-->
+		<binaryToString id="CreateString" input="LoadData"/>
+		<xmlize id="MakeXml" input="CreateString"/>
 		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
-		<xslTransformation id="IndexXHTML" output="index.html">
+		<xslTransformation id="IndexHTML" output="index.html">
 			<input id="MakeXml"/>
 			<input id="LoadXslt"/>
 		</xslTransformation>
 	</processes>
+	   
 </widget>

@@ -9,6 +9,7 @@ using Solvek.Gears.Engine.Host;
 
 namespace Solvek.Gears.Engine.Processes
 {
+	[XmlRoot("webRequest")]
 	public class WebRequest : BaseProcess
 	{
 		public WebRequest()
@@ -35,10 +36,7 @@ namespace Solvek.Gears.Engine.Processes
 				throw new ApplicationException(String.Format("Failed to retrieve data from {0}", Url), ex);
 			}
 
-			StreamReader reader = new StreamReader(resp.GetResponseStream());
-			string res = reader.ReadToEnd();
-			reader.Close();
-			return res;
+			return ReadAllFromStream(resp.GetResponseStream());
 		}
 
 		protected override void ValidateInputs(object[] inputs)
@@ -48,7 +46,27 @@ namespace Solvek.Gears.Engine.Processes
 
 		protected override void Output(object obj, Stream stream)
 		{
-			OutputString((string)obj, stream);
+			OutputBinary((byte[])obj, stream);
+		}
+
+		private static byte[] ReadAllFromStream(Stream s)
+		{
+			const int bufSize = 9192;
+			byte[] res;
+			using (MemoryStream mem = new MemoryStream())
+			{
+				byte[] buf = new byte[bufSize];
+
+				int curSize;
+				while ((curSize = s.Read(buf, 0, bufSize)) > 0)
+				{
+					mem.Write(buf, 0, curSize);
+				}
+				res = mem.GetBuffer();
+				mem.Close();
+			}
+
+			return res;
 		}
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(WebRequest));

@@ -1,24 +1,29 @@
 using System;
 using System.IO;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace Solvek.Gears.Engine.Processes
 {
-	[XmlRoot("loadXml")]
-	public class LoadXml : BaseProcess
+	[XmlRoot("loadFile")]
+	public class LoadFile : BaseProcess
 	{
-		public LoadXml()
+		public LoadFile()
 		{}
 
 		[XmlAttribute("path")]
-		public string XmlPath;
+		public string FilePath;
 
 		protected override object ExecuteInternal(object[] inputs)
 		{
-			XmlDocument doc = new XmlDocument();
-			doc.Load(Context.WidgetFilePath(XmlPath));
-			return doc;
+			byte[] buf;
+			using(FileStream s = new FileStream(Context.WidgetFilePath(FilePath), FileMode.Open))
+			{
+				buf = new byte[s.Length];
+				s.Read(buf, 0, Convert.ToInt32(s.Length));
+				s.Close();
+			}
+
+			return buf;
 		}
 
 		protected override void ValidateInputs(object[] inputs)
@@ -28,7 +33,7 @@ namespace Solvek.Gears.Engine.Processes
 
 		protected override void Output(object obj, Stream stream)
 		{
-			OutputString((string)obj, stream);
+			OutputBinary((byte[])obj, stream);
 		}
 	}
 }

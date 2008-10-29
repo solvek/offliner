@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-
+using System.Xml.Serialization;
 using log4net;
 
 using Solvek.Gears.Engine.Processes;
@@ -26,17 +26,22 @@ namespace Solvek.Gears.Engine.Runtime
 			}
 			catch (Exception ex)
 			{
+				_state.Status = Status.Failed;
 				_log.Error("Failed to update widget "+_widget.Name, ex);
 				throw;
 			}
 
-			_lastUpdated = DateTime.UtcNow;
-			_log.InfoFormat("Finished updating of widget {0}", _widget.Name);
-		}
+			_state.Status = Status.Success;
+			_state.LastUpdate = DateTime.UtcNow;
 
-		public DateTime LastUpdated
-		{
-			get { return this._lastUpdated; }
+			using(StreamWriter writer = new StreamWriter(GetStateFilePath()))
+			{
+				XmlSerializer sr = new XmlSerializer(typeof(WidgetState));
+				sr.Serialize(writer, _state);
+				writer.Close();
+			}
+			
+			_log.InfoFormat("Finished updating of widget {0}", _widget.Name);
 		}
 
 		public string ResultHtmlPath
@@ -49,14 +54,24 @@ namespace Solvek.Gears.Engine.Runtime
 			return _widget.Name;
 		}
 
-		internal string WidgetFilePath(string fileName)
+		public WidgetState State
+		{
+			get { return this._state; }
+		}
+
+		public string WidgetFilePath(string fileName)
 		{
 			return Path.Combine(this._homePath, fileName);
 		}
 
-		internal Widget Widget
+		public Widget Widget
 		{
 			get{return _widget;}
+		}
+
+		internal string GetStateFilePath()
+		{
+			return this.WidgetFilePath("_sg_state.xml");
 		}
 
 		private void LoadWidget()
@@ -66,7 +81,23 @@ namespace Solvek.Gears.Engine.Runtime
 			{
 				proc.Context = this;
 			}
-			_widget.processesDefinitions = null;
+			//_widget.processesDefinitions = null;
+
+			try
+			{
+				using (StreamReader reader = new StreamReader(GetStateFilePath()))
+				{
+					XmlSerializer dsr = new XmlSerializer(typeof(WidgetState));
+					_state = (WidgetState)dsr.Deserialize(reader);
+					reader.Close();
+				}
+			}
+			catch (Exception ex)
+			{
+				_state = new WidgetState();
+				_log.Warn("Failed to load widget state", ex);
+			}
+
 			//_widget = new Widget();
 			//_widget.Name = "Test";
 			//Source src = new Source();
@@ -81,8 +112,8 @@ namespace Solvek.Gears.Engine.Runtime
 			//sr.Serialize(writer, _widget);
 		}
 
-		private DateTime _lastUpdated;
 		private Widget _widget;
+		private WidgetState _state;
 		private readonly string _homePath;
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(WidgetProcessor));

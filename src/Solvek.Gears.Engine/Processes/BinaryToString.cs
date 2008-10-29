@@ -1,29 +1,28 @@
 using System;
 using System.IO;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace Solvek.Gears.Engine.Processes
 {
-	[XmlRoot("loadXml")]
-	public class LoadXml : BaseProcess
+	[XmlRoot("binaryToString")]
+	public class BinaryToString : BaseProcess
 	{
-		public LoadXml()
+		public BinaryToString()
 		{}
 
-		[XmlAttribute("path")]
-		public string XmlPath;
+		[XmlAttribute("encoding")]
+		public string Encoding = "utf-8";
 
 		protected override object ExecuteInternal(object[] inputs)
 		{
-			XmlDocument doc = new XmlDocument();
-			doc.Load(Context.WidgetFilePath(XmlPath));
-			return doc;
+			byte[] buf = (byte[]) inputs[0];
+			return System.Text.Encoding.GetEncoding(Encoding).GetString(buf, 0, buf.Length);
 		}
 
 		protected override void ValidateInputs(object[] inputs)
 		{
-			ValidateNoInputs(inputs);
+			ValidateInputAmount(inputs, 1);
+			ValidateTypes(inputs, new DataType[]{DataType.RowData});
 		}
 
 		protected override void Output(object obj, Stream stream)

@@ -7,6 +7,7 @@ namespace Solvek.Gears.Engine.Processes
 	{
 		None = 0x1,
 		String = 0x2,
-		XmlDocument = 0x4
+		XmlDocument = 0x4,
+		RowData = 0x8
 	}
 }

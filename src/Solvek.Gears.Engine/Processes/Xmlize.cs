@@ -1,10 +1,13 @@
 using System;
 using System.IO;
 using System.Xml;
+using System.Xml.Serialization;
+
 using Sgml;
 
 namespace Solvek.Gears.Engine.Processes
 {
+	[XmlRoot("xmlize")]
 	public class Xmlize : BaseProcess
 	{
 		public Xmlize()

@@ -41,6 +41,14 @@ namespace Solvek.Gears.App
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this._password = new System.Windows.Forms.TextBox();
+			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.label4 = new System.Windows.Forms.Label();
+			this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.tabControl1.SuspendLayout();
+			this.tabPage1.SuspendLayout();
+			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
@@ -100,22 +108,59 @@ namespace Solvek.Gears.App
 			resources.ApplyResources(this._password, "_password");
 			this._password.Name = "_password";
 			// 
+			// tabControl1
+			// 
+			this.tabControl1.Controls.Add(this.tabPage1);
+			this.tabControl1.Controls.Add(this.tabPage2);
+			resources.ApplyResources(this.tabControl1, "tabControl1");
+			this.tabControl1.Name = "tabControl1";
+			this.tabControl1.SelectedIndex = 0;
+			// 
+			// tabPage1
+			// 
+			this.tabPage1.Controls.Add(this.label4);
+			this.tabPage1.Controls.Add(this.comboBoxLanguage);
+			resources.ApplyResources(this.tabPage1, "tabPage1");
+			this.tabPage1.Name = "tabPage1";
+			// 
+			// label4
+			// 
+			resources.ApplyResources(this.label4, "label4");
+			this.label4.Name = "label4";
+			// 
+			// comboBoxLanguage
+			// 
+			this.comboBoxLanguage.DisplayMember = "Language";
+			resources.ApplyResources(this.comboBoxLanguage, "comboBoxLanguage");
+			this.comboBoxLanguage.Name = "comboBoxLanguage";
+			this.comboBoxLanguage.ValueMember = "Code";
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this._useProxy);
+			this.tabPage2.Controls.Add(this.label3);
+			this.tabPage2.Controls.Add(this._proxyAddress);
+			this.tabPage2.Controls.Add(this._password);
+			this.tabPage2.Controls.Add(this.label1);
+			this.tabPage2.Controls.Add(this.label2);
+			this.tabPage2.Controls.Add(this._reqAuthentication);
+			this.tabPage2.Controls.Add(this._userName);
+			resources.ApplyResources(this.tabPage2, "tabPage2");
+			this.tabPage2.Name = "tabPage2";
+			// 
 			// Settings
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			resources.ApplyResources(this, "$this");
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this._password);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this._userName);
-			this.Controls.Add(this._reqAuthentication);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this._proxyAddress);
-			this.Controls.Add(this._useProxy);
+			this.Controls.Add(this.tabControl1);
 			this.KeyPreview = true;
 			this.Menu = this.mainMenu1;
 			this.Name = "Settings";
+			this.Load += new System.EventHandler(this.Settings_Load);
+			this.tabControl1.ResumeLayout(false);
+			this.tabPage1.ResumeLayout(false);
+			this.tabPage2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -132,5 +177,10 @@ namespace Solvek.Gears.App
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox _password;
+		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabPage tabPage1;
+		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.ComboBox comboBoxLanguage;
 	}
 }

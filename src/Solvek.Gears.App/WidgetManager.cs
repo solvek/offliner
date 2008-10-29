@@ -1,6 +1,6 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 using Solvek.Gears.Engine.Host;
 using Solvek.Gears.Engine.Runtime;
@@ -16,29 +16,16 @@ namespace Solvek.Gears.App
 		
 		public WidgetProcessor[] LoadProcessors(string path)
 		{
-			string[] direcotories = Directory.GetDirectories(path);
-			_processors = new WidgetProcessor[direcotories.Length];
-			for (int i = 0; i < direcotories.Length; i++)
+			List<WidgetProcessor> t = new List<WidgetProcessor>();
+			foreach (string dir in Directory.GetDirectories(path))
 			{
-				WidgetProcessor proc = new WidgetProcessor(direcotories[i]);
-				_processors[i] = proc;
-			}
-			return _processors;
-		}
-
-		public void UpdateAll()
-		{
-			foreach (WidgetProcessor processor in _processors)
-			{
-				try
+				if (Path.GetFileName(dir) != "Common")
 				{
-					processor.Update();
+					t.Add(new WidgetProcessor(dir));
 				}
-				catch (ApplicationException ex)
-				{
-					MessageBox.Show(String.Format("Failed to update data for widget {0}. Error: {1}", processor, ex.Message));
-				}				
 			}
+			_processors = t.ToArray();
+			return _processors;
 		}
 
 		public WMHost Host

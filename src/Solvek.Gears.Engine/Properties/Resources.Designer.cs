@@ -92,5 +92,41 @@ namespace Solvek.Gears.Engine.Properties {
                 return ResourceManager.GetString("Errors_Process_WrongTypeN", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed.
+        /// </summary>
+        internal static string WidgetStatus_Failed {
+            get {
+                return ResourceManager.GetString("WidgetStatus_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not updated.
+        /// </summary>
+        internal static string WidgetStatus_NotUpdated {
+            get {
+                return ResourceManager.GetString("WidgetStatus_NotUpdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success.
+        /// </summary>
+        internal static string WidgetStatus_Success {
+            get {
+                return ResourceManager.GetString("WidgetStatus_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating.
+        /// </summary>
+        internal static string WidgetStatus_Updating {
+            get {
+                return ResourceManager.GetString("WidgetStatus_Updating", resourceCulture);
+            }
+        }
     }
 }
