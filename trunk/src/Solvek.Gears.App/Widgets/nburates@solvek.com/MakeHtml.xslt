@@ -9,20 +9,16 @@
 					<link type="text/css" rel="stylesheet" href="../common/common.css" />
 				</head>
 				<body>
-					<xsl:apply-templates mode="pass1"/>
+					<xsl:apply-templates select="html/body/table/tbody/tr/td/div"/>
 				</body>
 			</html>
 		</xsl:template>
-		<xsl:template match="resultSet/result[@id='1']/widget" mode="pass1">
+		<xsl:template match="form[@id='tableForm']">
 			<div id="titleBar">
-				<img alt="Іконка віджету" widht="16px" height="16px">
-					<xsl:attribute name="scr"><xsl:value-of select="icon"/></xsl:attribute>
-				</img>
+				<img src="nbu.png" alt="Іконка віджету" widht="16px" height="16px"/>
 				<span style="padding-left:5px"/>
 				<a href="http://www.solvek.com/gears">Курси НБУ</a>				
 			</div>
-		</xsl:template>
-		<xsl:template match="resultSet/result[@id='2']/html/body/table/tbody/tr/td/div/form[@id='tableForm']" mode="pass1">
 			<div id="subTitle">
 				<span style="padding-left:10px">Останнє оновлення: 2008-10-30</span>
 			</div>
@@ -48,16 +44,9 @@
 					</li>
 				</xsl:for-each>
 			</ul>
-		</xsl:template>
-		<!--
-		<xsl:template match="resultSet/result[@id='1']/widget">
 			<div id="subTitle">
 				<span>Автор віджету: </span>
-				<a>
-					<xsl:attribute name="href"><xsl:value-of select="authorUrl"/></xsl:attribute>
-					<xsl:value-of select="author"/>
-				</a>
+				<a href="http://www.solvek.com">Сергій Адамчук</a>
 			</div>
 		</xsl:template>
--->
 </xsl:stylesheet>

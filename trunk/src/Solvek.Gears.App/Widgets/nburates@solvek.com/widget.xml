@@ -10,20 +10,12 @@
 
 	 
 	<processes>
-		<!--<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx" output="webresult.bin"/>-->
-		<loadFile id="LoadData" path="webresult.bin"/>
+		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx" output="webresult.bin"/>
 		<binaryToString id="CreateString" input="LoadData"/>
 		<xmlize id="MakeXml" input="CreateString"/>
-		<loadXml id="LoadWidget" path="widget.xml"/>
-		<getWidgetState id="GetState"/>
-		<resultSet id="ResultSet" output="resultset.xml">
-			<input id="GetState"/>
-			<input id="LoadWidget"/>
-			<input id="MakeXml"/>
-		</resultSet>
 		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
 		<xslTransformation id="IndexHTML" output="index.html">
-			<input id="ResultSet"/>
+			<input id="MakeXml"/>
 			<input id="LoadXslt"/>
 		</xslTransformation>
 	</processes>
