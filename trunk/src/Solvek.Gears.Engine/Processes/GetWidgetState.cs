@@ -20,9 +20,9 @@ namespace Solvek.Gears.Engine.Processes
 			{
 				XmlSerializer sr = new XmlSerializer(typeof(WidgetState));
 				sr.Serialize(writer, Context.State);
-				writer.Close();
 				ms.Seek(0, SeekOrigin.Begin);
 				doc.Load(ms);
+				writer.Close();
 				ms.Close();
 			}
 
