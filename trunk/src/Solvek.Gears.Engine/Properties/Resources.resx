@@ -130,15 +130,15 @@
     <value>{0}th argument expected of type {1}</value>
   </data>
   <data name="WidgetStatus_Failed" xml:space="preserve">
-    <value>Failed</value>
+    <value>Помилка</value>
   </data>
   <data name="WidgetStatus_NotUpdated" xml:space="preserve">
-    <value>Not updated</value>
+    <value>Немає даних</value>
   </data>
   <data name="WidgetStatus_Success" xml:space="preserve">
-    <value>Success</value>
+    <value>Гаразд</value>
   </data>
   <data name="WidgetStatus_Updating" xml:space="preserve">
-    <value>Updating</value>
+    <value>Оновлення</value>
   </data>
 </root>

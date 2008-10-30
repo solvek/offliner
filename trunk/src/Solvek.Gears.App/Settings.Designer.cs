@@ -29,7 +29,6 @@ namespace Solvek.Gears.App
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
 			this.mainMenu1 = new System.Windows.Forms.MainMenu();
 			this.menuItem1 = new System.Windows.Forms.MenuItem();
 			this.menuItem2 = new System.Windows.Forms.MenuItem();
@@ -41,14 +40,6 @@ namespace Solvek.Gears.App
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this._password = new System.Windows.Forms.TextBox();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.label4 = new System.Windows.Forms.Label();
-			this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tabControl1.SuspendLayout();
-			this.tabPage1.SuspendLayout();
-			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
@@ -58,109 +49,94 @@ namespace Solvek.Gears.App
 			// 
 			// menuItem1
 			// 
-			resources.ApplyResources(this.menuItem1, "menuItem1");
+			this.menuItem1.Text = "Ок";
 			this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
 			// 
 			// menuItem2
 			// 
-			resources.ApplyResources(this.menuItem2, "menuItem2");
+			this.menuItem2.Text = "Скасувати";
 			this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
 			// 
 			// _useProxy
 			// 
-			resources.ApplyResources(this._useProxy, "_useProxy");
+			this._useProxy.Location = new System.Drawing.Point(21, 20);
 			this._useProxy.Name = "_useProxy";
+			this._useProxy.Size = new System.Drawing.Size(348, 40);
+			this._useProxy.TabIndex = 0;
+			this._useProxy.Text = "Використовувати проксі";
 			this._useProxy.CheckStateChanged += new System.EventHandler(this._useProxy_CheckStateChanged);
 			// 
 			// _proxyAddress
 			// 
-			resources.ApplyResources(this._proxyAddress, "_proxyAddress");
+			this._proxyAddress.Location = new System.Drawing.Point(242, 93);
 			this._proxyAddress.Name = "_proxyAddress";
+			this._proxyAddress.Size = new System.Drawing.Size(201, 41);
+			this._proxyAddress.TabIndex = 2;
 			// 
 			// label1
 			// 
-			resources.ApplyResources(this.label1, "label1");
+			this.label1.Location = new System.Drawing.Point(21, 94);
 			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(221, 40);
+			this.label1.Text = "Проксі (хост:порт)";
 			// 
 			// _reqAuthentication
 			// 
-			resources.ApplyResources(this._reqAuthentication, "_reqAuthentication");
+			this._reqAuthentication.Location = new System.Drawing.Point(21, 248);
 			this._reqAuthentication.Name = "_reqAuthentication";
+			this._reqAuthentication.Size = new System.Drawing.Size(360, 50);
+			this._reqAuthentication.TabIndex = 6;
+			this._reqAuthentication.Text = "Потрібна авторизація";
 			this._reqAuthentication.CheckStateChanged += new System.EventHandler(this._reqAuthorization_CheckStateChanged);
 			// 
 			// _userName
 			// 
-			resources.ApplyResources(this._userName, "_userName");
+			this._userName.Location = new System.Drawing.Point(242, 304);
 			this._userName.Name = "_userName";
+			this._userName.Size = new System.Drawing.Size(201, 41);
+			this._userName.TabIndex = 7;
 			// 
 			// label2
 			// 
-			resources.ApplyResources(this.label2, "label2");
+			this.label2.Location = new System.Drawing.Point(21, 304);
 			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(175, 41);
+			this.label2.Text = "Користувач";
 			// 
 			// label3
 			// 
-			resources.ApplyResources(this.label3, "label3");
+			this.label3.Location = new System.Drawing.Point(21, 377);
 			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(100, 41);
+			this.label3.Text = "Пароль";
 			// 
 			// _password
 			// 
-			resources.ApplyResources(this._password, "_password");
+			this._password.Location = new System.Drawing.Point(242, 377);
 			this._password.Name = "_password";
-			// 
-			// tabControl1
-			// 
-			this.tabControl1.Controls.Add(this.tabPage1);
-			this.tabControl1.Controls.Add(this.tabPage2);
-			resources.ApplyResources(this.tabControl1, "tabControl1");
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.SelectedIndex = 0;
-			// 
-			// tabPage1
-			// 
-			this.tabPage1.Controls.Add(this.label4);
-			this.tabPage1.Controls.Add(this.comboBoxLanguage);
-			resources.ApplyResources(this.tabPage1, "tabPage1");
-			this.tabPage1.Name = "tabPage1";
-			// 
-			// label4
-			// 
-			resources.ApplyResources(this.label4, "label4");
-			this.label4.Name = "label4";
-			// 
-			// comboBoxLanguage
-			// 
-			this.comboBoxLanguage.DisplayMember = "Language";
-			resources.ApplyResources(this.comboBoxLanguage, "comboBoxLanguage");
-			this.comboBoxLanguage.Name = "comboBoxLanguage";
-			this.comboBoxLanguage.ValueMember = "Code";
-			// 
-			// tabPage2
-			// 
-			this.tabPage2.Controls.Add(this._useProxy);
-			this.tabPage2.Controls.Add(this.label3);
-			this.tabPage2.Controls.Add(this._proxyAddress);
-			this.tabPage2.Controls.Add(this._password);
-			this.tabPage2.Controls.Add(this.label1);
-			this.tabPage2.Controls.Add(this.label2);
-			this.tabPage2.Controls.Add(this._reqAuthentication);
-			this.tabPage2.Controls.Add(this._userName);
-			resources.ApplyResources(this.tabPage2, "tabPage2");
-			this.tabPage2.Name = "tabPage2";
+			this._password.PasswordChar = '*';
+			this._password.Size = new System.Drawing.Size(201, 41);
+			this._password.TabIndex = 3;
 			// 
 			// Settings
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			resources.ApplyResources(this, "$this");
-			this.Controls.Add(this.tabControl1);
+			this.ClientSize = new System.Drawing.Size(480, 536);
+			this.Controls.Add(this._useProxy);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this._userName);
+			this.Controls.Add(this._proxyAddress);
+			this.Controls.Add(this._reqAuthentication);
+			this.Controls.Add(this._password);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.label1);
 			this.KeyPreview = true;
+			this.Location = new System.Drawing.Point(0, 52);
 			this.Menu = this.mainMenu1;
 			this.Name = "Settings";
+			this.Text = "Налаштування";
 			this.Load += new System.EventHandler(this.Settings_Load);
-			this.tabControl1.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			this.tabPage2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -177,10 +153,5 @@ namespace Solvek.Gears.App
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox _password;
-		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.ComboBox comboBoxLanguage;
 	}
 }

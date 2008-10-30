@@ -29,7 +29,6 @@ namespace Solvek.Gears.App
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.mainMenu1 = new System.Windows.Forms.MainMenu();
 			this.menuItemRefresh = new System.Windows.Forms.MenuItem();
 			this.menuItemSettings = new System.Windows.Forms.MenuItem();
@@ -46,46 +45,53 @@ namespace Solvek.Gears.App
 			// 
 			// menuItemRefresh
 			// 
-			resources.ApplyResources(this.menuItemRefresh, "menuItemRefresh");
+			this.menuItemRefresh.Text = "Оновити";
 			this.menuItemRefresh.Click += new System.EventHandler(this.menuItemRefresh_Click);
 			// 
 			// menuItemSettings
 			// 
-			resources.ApplyResources(this.menuItemSettings, "menuItemSettings");
+			this.menuItemSettings.Text = "Налаштувати";
 			this.menuItemSettings.Click += new System.EventHandler(this.menuItemSettings_Click);
 			// 
 			// listViewWidgets
 			// 
-			resources.ApplyResources(this.listViewWidgets, "listViewWidgets");
 			this.listViewWidgets.Columns.Add(this.columnHeaderName);
 			this.listViewWidgets.Columns.Add(this.columnHeaderStatus);
+			this.listViewWidgets.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.listViewWidgets.FullRowSelect = true;
 			this.listViewWidgets.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+			this.listViewWidgets.Location = new System.Drawing.Point(0, 0);
 			this.listViewWidgets.Name = "listViewWidgets";
+			this.listViewWidgets.Size = new System.Drawing.Size(480, 536);
 			this.listViewWidgets.SmallImageList = this.imageListIcons;
+			this.listViewWidgets.TabIndex = 0;
 			this.listViewWidgets.View = System.Windows.Forms.View.Details;
 			this.listViewWidgets.ItemActivate += new System.EventHandler(this.listViewWidgets_ItemActivate);
 			// 
 			// columnHeaderName
 			// 
-			resources.ApplyResources(this.columnHeaderName, "columnHeaderName");
+			this.columnHeaderName.Text = "Віджет";
+			this.columnHeaderName.Width = 279;
 			// 
 			// columnHeaderStatus
 			// 
-			resources.ApplyResources(this.columnHeaderStatus, "columnHeaderStatus");
+			this.columnHeaderStatus.Text = "Статус";
+			this.columnHeaderStatus.Width = 304;
 			// 
 			// imageListIcons
 			// 
-			resources.ApplyResources(this.imageListIcons, "imageListIcons");
+			this.imageListIcons.ImageSize = new System.Drawing.Size(32, 32);
 			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			resources.ApplyResources(this, "$this");
+			this.ClientSize = new System.Drawing.Size(480, 536);
 			this.Controls.Add(this.listViewWidgets);
+			this.Location = new System.Drawing.Point(0, 52);
 			this.Menu = this.mainMenu1;
 			this.Name = "MainForm";
+			this.Text = "Solvek Gears";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.ResumeLayout(false);
 
