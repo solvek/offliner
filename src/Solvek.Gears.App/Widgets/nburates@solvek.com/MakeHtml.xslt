@@ -15,12 +15,13 @@
 		</xsl:template>
 		<xsl:template match="form[@id='tableForm']">
 			<div id="titleBar">
-				<div id="widgetTitle">
-					<img src="nbu16.png" alt="НБУ лого"/><span>Курси НБУ</span>
-				</div>
-				<div id="helpLink">
-					<img src="../common/help.png" alt="Допомога"/>
-				</div>
+				<img src="nbu.png" alt="НБУ лого" widht="16px" height="16px"/>
+				<span style="padding-left:5px"/>
+				<a href="http://www.solvek.com/gears">Курси НБУ</a>
+				<span style="padding-left:20px"/>
+				<a href="help.html">
+					<img src="../common/help.gif" alt="Допомога"/>
+				</a>
 			</div>
 			<p>Дані на <xsl:value-of select="p/br/span"/></p>
 			<table>

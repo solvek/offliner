@@ -94,7 +94,7 @@ namespace Solvek.Gears.Engine.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed.
+        ///   Looks up a localized string similar to Помилка.
         /// </summary>
         internal static string WidgetStatus_Failed {
             get {
@@ -103,7 +103,7 @@ namespace Solvek.Gears.Engine.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not updated.
+        ///   Looks up a localized string similar to Немає даних.
         /// </summary>
         internal static string WidgetStatus_NotUpdated {
             get {
@@ -112,7 +112,7 @@ namespace Solvek.Gears.Engine.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Success.
+        ///   Looks up a localized string similar to Гаразд.
         /// </summary>
         internal static string WidgetStatus_Success {
             get {
@@ -121,7 +121,7 @@ namespace Solvek.Gears.Engine.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Updating.
+        ///   Looks up a localized string similar to Оновлення.
         /// </summary>
         internal static string WidgetStatus_Updating {
             get {

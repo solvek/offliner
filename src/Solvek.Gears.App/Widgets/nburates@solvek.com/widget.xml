@@ -10,7 +10,7 @@
 
 	 
 	<processes>
-		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx"/>
+		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx" output="webresult.bin"/>
 		<!--<loadFile id="LoadData" path="webresult.bin"/>-->
 		<binaryToString id="CreateString" input="LoadData"/>
 		<xmlize id="MakeXml" input="CreateString"/>

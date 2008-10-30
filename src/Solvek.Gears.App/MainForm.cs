@@ -1,11 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
 using System.Reflection;
-using System.Resources;
-using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -25,17 +22,16 @@ namespace Solvek.Gears.App
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			LoadConfig();
-			Properties.Resources.Culture = new CultureInfo(_config.Loacalization);
-			
+
 			string widgetsPath = GetAppFolderItem("Widgets");
 			WidgetProcessor[] procs = this._manager.LoadProcessors(widgetsPath);
 			foreach (WidgetProcessor proc in procs)
 			{
 				AppendProcess(proc);
 			}
-			if (CurrentAutoScaleDimensions.Width == 192)
+			if (CurrentAutoScaleDimensions.Width < 192)
 			{
-				imageListIcons.ImageSize = new Size(24, 24);
+				imageListIcons.ImageSize = new Size(16, 16);
 			}
 		}
 
