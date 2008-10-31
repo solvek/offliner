@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<widget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.solvek.com/gears/widget">
+<widget>
 	<id>nburates@solvek.com</id>
 	<name>Курси НБУ</name>
 	<widgetUrl>http://www.solvek.com/gears</widgetUrl>
@@ -7,15 +7,38 @@
 	<authorUrl>http://www.solvek.com</authorUrl>
 	<updateProcess>IndexHTML</updateProcess>
 	<icon>nbu.png</icon>
+	<sourceSite>http://bank.gov.ua</sourceSite>
 
 	 
 	<processes>
-		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx" output="webresult.bin"/>
+		<!-- <webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx"/> -->
+		<loadFile id="LoadData" path="webresult.bin"/>
 		<binaryToString id="CreateString" input="LoadData"/>
 		<xmlize id="MakeXml" input="CreateString"/>
 		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
-		<xslTransformation id="IndexHTML" output="index.html">
+		<loadXml id="LoadWidget" path="widget.xml"/>
+		<getWidgetState id="GetState"/>
+		<xpath id="ResultSet">
+			<input id="GetState"/>
+			<input id="LoadWidget"/>
 			<input id="MakeXml"/>
+
+			<select inputIndex="1" elementName="widgetInfo">
+				<expression>/widget/name</expression>
+				<expression>/widget/widgetUrl</expression>
+				<expression>/widget/icon</expression>
+			</select>
+			<select inputIndex="0" elementName="status" expression="/WidgetState/LastUpdate"/>
+			<select inputIndex="2" elementName="date" expression="/html/body/table/tbody/tr/td/div/form/p[@align='center']/br/span"/>
+			<select inputIndex="2" elementName="rates" expression="/html/body/table/tbody/tr/td/div/form/table[1]"/>
+			<select inputIndex="1" elementName="copyright" expression="/widget/sourceSite"/>
+			<select inputIndex="1" elementName="authorInfo">
+				<expression>/widget/author</expression>
+				<expression>/widget/authorUrl</expression>
+			</select>
+		</xpath>
+		<xslTransformation id="IndexHTML" output="index.html">
+			<input id="ResultSet"/>
 			<input id="LoadXslt"/>
 		</xslTransformation>
 	</processes>

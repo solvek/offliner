@@ -27,6 +27,13 @@ body
 	background-color: #99ffcc;
 }
 
+#copyright
+{
+	font-size : x-small;
+	width: 100%;
+	text-align:right;
+	color: Gray;
+}
 
 .evenRow
 {
