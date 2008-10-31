@@ -6,7 +6,7 @@ using Solvek.Gears.Engine.Processes;
 
 namespace Solvek.Gears.Engine.WidgetDescription
 {
-	[XmlRoot("widget", Namespace = "http://www.solvek.com/gears/widget")]
+	[XmlRoot("widget")]
 	[XmlInclude(typeof(LoadFile))]
 	public class Widget
 	{

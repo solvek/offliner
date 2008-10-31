@@ -66,7 +66,7 @@ namespace Solvek.Gears.Engine.Processes
 					}
 					break;
 				}
-				XmlSerializer s = new XmlSerializer(t, "http://www.solvek.com/gears/widget");
+				XmlSerializer s = new XmlSerializer(t);
 				BaseProcess p = (BaseProcess) s.Deserialize(reader);
 				Add(p);
 			}

@@ -9,22 +9,33 @@
 					<link type="text/css" rel="stylesheet" href="../common/common.css" />
 				</head>
 				<body>
-					<xsl:apply-templates select="html/body/table/tbody/tr/td/div"/>
+					<xsl:apply-templates select="resultSet"/>
 				</body>
 			</html>
 		</xsl:template>
-		<xsl:template match="form[@id='tableForm']">
+		<xsl:template match="widgetInfo">
 			<div id="titleBar">
-				<img src="nbu.png" alt="Іконка віджету" widht="16px" height="16px"/>
+				<img alt="Іконка віджету" widht="16px" height="16px">
+					<xsl:attribute name="src"><xsl:value-of select="icon"/></xsl:attribute>
+				</img>
 				<span style="padding-left:5px"/>
-				<a href="http://www.solvek.com/gears">Курси НБУ</a>				
-			</div>
+				<a>
+					<xsl:attribute name="href"><xsl:value-of select="widgetUrl"/></xsl:attribute>
+					<xsl:value-of select="name"/>
+				</a>				
+			</div>			
+		</xsl:template>
+		<xsl:template match="status">
 			<div id="subTitle">
-				<span style="padding-left:10px">Останнє оновлення: 2008-10-30</span>
-			</div>
-			<p>Дані на <xsl:value-of select="p/br/span"/></p>
+				<span style="padding-left:10px">Останнє оновлення: <xsl:value-of select="substring(LastUpdate,1,10)"/></span>
+			</div>			
+		</xsl:template>
+		<xsl:template match="date">
+			<p>Дані на <xsl:value-of select="span"/></p>
+		</xsl:template>		
+		<xsl:template match="rates/table">
 			<ul>
-				<xsl:for-each select="table/tr[@class='G1' or @class='w1']">
+				<xsl:for-each select="tr[@class='G1' or @class='w1']">
 					<li>
 						<xsl:choose>
 							<xsl:when test="position() mod 2 = 1">
@@ -44,9 +55,22 @@
 					</li>
 				</xsl:for-each>
 			</ul>
-			<div id="subTitle">
-				<span>Автор віджету: </span>
-				<a href="http://www.solvek.com">Сергій Адамчук</a>
+		</xsl:template>
+		<xsl:template match="copyright">
+			<div id="copyright">За даними сайту 
+				<a>
+					<xsl:attribute name="href"><xsl:value-of select="sourceSite"/></xsl:attribute>
+					<xsl:value-of select="sourceSite"/>
+				</a>
 			</div>
 		</xsl:template>
+		<xsl:template match="authorInfo">
+			<div id="subTitle">
+				<span>Автор віджету: </span>
+				<a>
+					<xsl:attribute name="href"><xsl:value-of select="authorUrl"/></xsl:attribute>
+					<xsl:value-of select="author"/>
+				</a>
+			</div>
+		</xsl:template>		
 </xsl:stylesheet>
