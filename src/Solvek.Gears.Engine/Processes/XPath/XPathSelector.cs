@@ -30,17 +30,13 @@ namespace Solvek.Gears.Engine.Processes.XPath
 				}
 
 				XmlDocument d = (XmlDocument) inputs[s.InputIndex];
-
-				if (!String.IsNullOrEmpty(s.XPathExpression))
-				{
-					SelectAndAppend(s.XPathExpression, d, result);
-				}
+				XmlNamespaceManager nsm = new XmlNamespaceManager(d.NameTable);
 
 				if (s.XPathExpressions != null)
 				{
 					foreach (string x in s.XPathExpressions)
 					{
-						SelectAndAppend(x, d, result);
+						SelectAndAppend(x, d, result, nsm);
 					}
 				}
 				root.AppendChild(result);
@@ -64,9 +60,9 @@ namespace Solvek.Gears.Engine.Processes.XPath
 			OutputXmlDocument((XmlDocument)obj, stream);
 		}
 
-		static private void SelectAndAppend(string expression, XmlNode source, XmlNode currentNode)
+		static private void SelectAndAppend(string expression, XmlNode source, XmlNode currentNode, XmlNamespaceManager nsm)
 		{
-			XmlNode node = source.SelectSingleNode(expression);
+			XmlNode node = source.SelectSingleNode(expression, nsm);
 
 			if (node == null)
 			{

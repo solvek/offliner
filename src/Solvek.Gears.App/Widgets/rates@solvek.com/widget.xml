@@ -1,23 +1,22 @@
 <?xml version="1.0"?>
 <widget>
-	<id>nburates@solvek.com</id>
-	<name>Курси НБУ</name>
+	<id>rates@solvek.com</id>
+	<name>Показники</name>
 	<widgetUrl>http://www.solvek.com/gears</widgetUrl>
 	<author>Sergi Adamchuk</author>
 	<authorUrl>http://www.solvek.com</authorUrl>
 	<updateProcess>IndexHTML</updateProcess>
-	<icon>nbu.png</icon>
-	<sourceSite>http://bank.gov.ua</sourceSite>
+	<icon>money.png</icon>
+	<sourceSite>http://kurs-valut.com.ua</sourceSite>
 
-
+	 
 	<processes>
-		<webRequest id="LoadData" url="http://www.bank.gov.ua/Fin_ryn/OF_KURS/Currency/FindByDate.aspx"/>
+		<webRequest id="LoadData" url="http://kurs-valut.com.ua"/>
 		<!-- <loadFile id="LoadData" path="webresult.bin"/> -->
-		<binaryToString id="CreateString">
+		<binaryToString id="CreateString" encoding="windows-1251">
 			<input>LoadData</input>
 		</binaryToString>
-
-		<xmlize id="MakeXml" output="xhtml.xml">
+		<xmlize id="MakeXml" processDocumentTag="false">
 			<input>CreateString</input>
 		</xmlize>
 		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
@@ -36,11 +35,8 @@
 			<select inputIndex="0" elementName="status">
 				<expression>/WidgetState/LastUpdate</expression>
 			</select>
-			<select inputIndex="2" elementName="date">
-				<expression>/html/body/table/tbody/tr/td/div/form/p[@align='center']/br/span</expression>
-			</select>
 			<select inputIndex="2" elementName="rates">
-				<expression>/html/body/table/tbody/tr/td/div/form/table[1]</expression>
+				<expression>//html/body/div/center/div/table/tr/td/div/table[1]</expression>
 			</select>
 			<select inputIndex="1" elementName="authorInfo">
 				<expression>/widget/author</expression>
@@ -49,7 +45,7 @@
 			<select inputIndex="1" elementName="copyright">
 				<expression>/widget/sourceSite</expression>
 			</select>
-		
+			
 		</xpath>
 		<xslTransformation id="IndexHTML" output="index.html">
 			<input>ResultSet</input>

@@ -13,12 +13,15 @@ namespace Solvek.Gears.Engine.Processes
 		public Xmlize()
 		{}
 
+		[XmlAttribute("processDocumentTag")]
+		public bool ProcessDocumentTag = true;
+
 		protected override object ExecuteInternal(object[] inputs)
 		{
 			return ExecuteInternal((string)inputs[0]);
 		}
 
-		static protected XmlDocument ExecuteInternal(string htmlText)
+		protected XmlDocument ExecuteInternal(string htmlText)
 		{
 			XmlDocument doc = new XmlDocument();
 			using (StringReader txt = new StringReader(htmlText))
@@ -27,6 +30,7 @@ namespace Solvek.Gears.Engine.Processes
 				reader.DocType = "HTML";
 				reader.WhitespaceHandling = WhitespaceHandling.All;
 				reader.CaseFolding = CaseFolding.ToLower;
+				reader.ProcessDocumentTag = ProcessDocumentTag;
 				reader.InputStream = txt;
 
 				doc.Load(reader);

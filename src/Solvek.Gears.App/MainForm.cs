@@ -90,6 +90,7 @@ namespace Solvek.Gears.App
 			}
 			this._config = dlg.GetConfig();
 			this.SaveConfig();
+			_manager.Host.PopulateConfig(_config);
 		}
 
 		private void AppendProcess(WidgetProcessor proc)

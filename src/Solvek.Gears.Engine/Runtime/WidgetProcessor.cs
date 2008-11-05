@@ -19,6 +19,8 @@ namespace Solvek.Gears.Engine.Runtime
 		public void Update()
 		{
 			_log.InfoFormat("Started update for widget {0}", _widget.Name);
+			DateTime prevUpdate = _state.LastUpdate;
+			_state.LastUpdate = DateTime.UtcNow;
 			try
 			{
 				_widget.Processes.ResetResults();
@@ -27,12 +29,12 @@ namespace Solvek.Gears.Engine.Runtime
 			catch (Exception ex)
 			{
 				_state.Status = Status.Failed;
+				_state.LastUpdate = prevUpdate;
 				_log.Error("Failed to update widget "+_widget.Name, ex);
 				throw;
 			}
 
-			_state.Status = Status.Success;
-			_state.LastUpdate = DateTime.UtcNow;
+			_state.Status = Status.Success;			
 
 			using(StreamWriter writer = new StreamWriter(GetStateFilePath()))
 			{

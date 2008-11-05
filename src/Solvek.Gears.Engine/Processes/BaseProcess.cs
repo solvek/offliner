@@ -21,17 +21,12 @@ namespace Solvek.Gears.Engine.Processes
 		public string Id;
 
 		[XmlElement("input")]
-		public Input[] Inputs;
-
-		[XmlAttribute("input")]
-		public string InputId;
+		public string[] Inputs;
 
         public object Execute()
         {
 			if (!_hasResult)
 			{
-				this.PrepareInputIds();
-
 				object[] inputs = this.GetArguments();
 
 				ValidateInputs(inputs);
@@ -149,10 +144,14 @@ namespace Solvek.Gears.Engine.Processes
 
 		private object[] GetArguments()
 		{
-			object[] inputs = new object[this._inpIds.Length];
-			for (int i = 0; i < this._inpIds.Length; i++)
+			if (Inputs == null)
 			{
-				inputs[i] = this.Context.Widget.Processes.ExecuteProcess(this._inpIds[i]);
+				return new object[0];
+			}
+			object[] inputs = new object[Inputs.Length];
+			for (int i = 0; i < Inputs.Length; i++)
+			{
+				inputs[i] = this.Context.Widget.Processes.ExecuteProcess(this.Inputs[i]);
 			}
 			return inputs;
 		}
@@ -169,43 +168,13 @@ namespace Solvek.Gears.Engine.Processes
 			}
 		}
 
-		private void PrepareInputIds()
-		{
-			if (this._inpIds != null)
-			{
-				return;
-			}
-			int cn = String.IsNullOrEmpty(this.InputId) ? 0 : 1;
-			if (this.Inputs != null)
-			{
-				cn += Inputs.Length;
-			}
-			this._inpIds = new string[cn];
-
-			if (Inputs != null)
-			{
-				for (int i = 0; i < this.Inputs.Length; i++)
-				{
-					this._inpIds[i] = this.Inputs[i].Id;
-				}
-			}
-
-			if (!String.IsNullOrEmpty(this.InputId))
-			{
-				this._inpIds[cn-1] = this.InputId;
-			}
-			this.Inputs = null;
-			this.InputId = null;
-		}
-
-		private string ProcessMessage(string operation)
+        private string ProcessMessage(string operation)
 		{
 			return String.Format("Process: {0}, Operation: {1}", Id, operation);
 		}
 
 		protected object _output;
 		private bool _hasResult;
-		private string[] _inpIds;
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(BaseProcess));
 	}
