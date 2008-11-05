@@ -72,7 +72,6 @@
     <Compile Include="Processes\BinaryToString.cs" />
     <Compile Include="Processes\DataType.cs" />
     <Compile Include="Processes\GetWidgetState.cs" />
-    <Compile Include="Processes\Input.cs" />
     <Compile Include="Processes\LoadFile.cs" />
     <Compile Include="Processes\LoadXml.cs" />
     <Compile Include="Processes\ProcessCollection.cs" />

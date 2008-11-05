@@ -116,7 +116,7 @@ namespace Solvek.Gears.App
 			this._password.Name = "_password";
 			this._password.PasswordChar = '*';
 			this._password.Size = new System.Drawing.Size(201, 41);
-			this._password.TabIndex = 3;
+			this._password.TabIndex = 12;
 			// 
 			// Settings
 			// 

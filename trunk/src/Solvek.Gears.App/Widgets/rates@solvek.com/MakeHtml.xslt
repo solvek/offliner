@@ -35,7 +35,7 @@
 		</xsl:template>		
 		<xsl:template match="rates/table">
 			<ul>
-				<xsl:for-each select="tr[@class='G1' or @class='w1']">
+				<xsl:for-each select="tr[@class!='titles2']">
 					<li>
 						<xsl:choose>
 							<xsl:when test="position() mod 2 = 1">
@@ -45,12 +45,31 @@
 								<xsl:attribute name="class">oddRow</xsl:attribute>
 							</xsl:otherwise>
 						</xsl:choose>							
-						<xsl:value-of select="td[3]"/>&#160;<xsl:value-of select="td[4]"/>&#160;
 						<span>
-							<xsl:if test="td[1] = '840' or td[1] = '978'">
-								<xsl:attribute name="style">font-weight: bold;</xsl:attribute>
-							</xsl:if>
-							<xsl:value-of select="td[5]"/>
+							<xsl:variable name="colsCount" select="count(td)"/>
+							<xsl:value-of select="td[1]"/>|
+							<xsl:value-of select="td[2]"/>|	
+							<a>
+								<xsl:attribute name="href">
+									<xsl:value-of select="td[($colsCount)]/a/@href"/>
+								</xsl:attribute>
+								<b>
+									<xsl:value-of select="td[3]"/>
+									<xsl:if test="$colsCount = 7">
+										/ <xsl:value-of select="td[4]"/>
+									</xsl:if>
+								</b>
+							</a>
+							<xsl:variable name="trendUrl" select="td[($colsCount)-2]/img/@src"/>
+							<xsl:variable name="trend" select="substring($trendUrl, 11, string-length($trendUrl)-14)"/>
+							<img>
+								<xsl:attribute name="src">
+									<xsl:value-of select="concat($trend, '.gif')"/>
+								</xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="$trend"/>
+								</xsl:attribute>
+							</img>
 						</span>
 					</li>
 				</xsl:for-each>

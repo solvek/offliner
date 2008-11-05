@@ -301,6 +301,8 @@ namespace Sgml {
             set { this.dtd = value; }
         }
 
+    	public bool ProcessDocumentTag = true;
+
         private void LazyLoadDtd(Uri baseUri) {
             if (this.dtd == null) {
                 if (this.syslit == null || this.syslit == "") {
@@ -968,39 +970,59 @@ namespace Sgml {
                 return ParseAspNet();
             }
             if (ch == '!') {
-                ch = this.current.ReadChar();
-                if (ch == '-') {
-                    return ParseComment();
-                } else if (ch == '[') {
-                    return ParseConditionalBlock();
-                }else if (ch != '_' && !Char.IsLetter(ch)) {
-                    // perhaps it's one of those nasty office document hacks like '<![if ! ie ]>'
-                    string value = this.current.ScanToEnd(this.sb, "Recovering", ">"); // skip it
-                    Log("Ignoring invalid markup '<!"+value+">");
-                    return false;
-                }
-                else {
-                    string name = this.current.ScanToken(this.sb, SgmlReader.declterm, false);
-                    if (name == "DOCTYPE") {
-                        ParseDocType();
-                        // In SGML DOCTYPE SYSTEM attribute is optional, but in XML it is required,
-                        // therefore if there is no SYSTEM literal then add an empty one.
-                        if (this.GetAttribute("SYSTEM") == null && this.GetAttribute("PUBLIC") != null) {
-                            this.node.AddAttribute("SYSTEM", "", '"', this.folding == CaseFolding.None);
-                        }
-                        if (stripDocType) {
-                            return false;
-                        } else {
-                            this.node.NodeType = XmlNodeType.DocumentType;
-                            return true;
-                        }
-                    } 
-                    else {
-                        Log("Invalid declaration '<!{0}...'.  Expecting '<!DOCTYPE' only.", name);
-                        this.current.ScanToEnd(null, "Recovering", ">"); // skip it
-                        return false;
-                    }
-                }
+				if (this.ProcessDocumentTag)
+				{
+					ch = this.current.ReadChar();
+					if (ch == '-')
+					{
+						return ParseComment();
+					}
+					else if (ch == '[')
+					{
+						return ParseConditionalBlock();
+					}
+					else if (ch != '_' && !Char.IsLetter(ch))
+					{
+						// perhaps it's one of those nasty office document hacks like '<![if ! ie ]>'
+						string value = this.current.ScanToEnd(this.sb, "Recovering", ">"); // skip it
+						Log("Ignoring invalid markup '<!" + value + ">");
+						return false;
+					}
+					else
+					{
+						string name = this.current.ScanToken(this.sb, SgmlReader.declterm, false);
+						if (name == "DOCTYPE")
+						{
+							ParseDocType();
+							// In SGML DOCTYPE SYSTEM attribute is optional, but in XML it is required,
+							// therefore if there is no SYSTEM literal then add an empty one.
+							if (this.GetAttribute("SYSTEM") == null && this.GetAttribute("PUBLIC") != null)
+							{
+								this.node.AddAttribute("SYSTEM", "", '"', this.folding == CaseFolding.None);
+							}
+							if (stripDocType)
+							{
+								return false;
+							}
+							else
+							{
+								this.node.NodeType = XmlNodeType.DocumentType;
+								return true;
+							}
+						}
+						else
+						{
+							Log("Invalid declaration '<!{0}...'.  Expecting '<!DOCTYPE' only.", name);
+							this.current.ScanToEnd(null, "Recovering", ">"); // skip it
+							return false;
+						}
+					}
+				}
+				else
+				{
+					this.current.ScanToEnd(this.sb, "Recovering", ">");
+					return false;
+				}
             } 
             else if (ch == '?') {
                 this.current.ReadChar();// consume the '?' character.
