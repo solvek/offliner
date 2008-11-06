@@ -239,6 +239,8 @@
     <Content Include="Widgets\Common\common.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Widgets\finance%40solvek.com\MakeHtml.xslt" />
+    <Content Include="Widgets\finance%40solvek.com\widget.xml" />
     <Content Include="Widgets\nburates%40solvek.com\MakeHtml.xslt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

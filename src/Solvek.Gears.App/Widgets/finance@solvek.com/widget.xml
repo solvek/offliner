@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<widget>
+	<id>finace@solvek.com</id>
+	<name>Фінанси</name>
+	<widgetUrl>http://www.solvek.com/gears</widgetUrl>
+	<author>Sergi Adamchuk</author>
+	<authorUrl>http://www.solvek.com</authorUrl>
+	<updateProcess>IndexHTML</updateProcess>
+	<icon>fin.png</icon>
+	<sourceSite>http://pda.finance.ua</sourceSite>
+
+	 
+	<processes>
+		<!-- <webRequest id="LoadData" url="http://pda.finance.ua" output="webresult.bin"/> -->
+		<loadFile id="LoadData" path="webresult.bin"/>
+		<binaryToString id="CreateString">
+			<input>LoadData</input>
+		</binaryToString>
+		<xmlize id="MakeXml" processDocumentTag="false">
+			<input>CreateString</input>
+		</xmlize>
+		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
+		<loadXml id="LoadWidget" path="widget.xml"/>
+		<getWidgetState id="GetState"/>
+		<xpath id="ResultSet">
+			<input>GetState</input>
+			<input>LoadWidget</input>
+			<input>MakeXml</input>
+
+			<select inputIndex="1" elementName="widgetInfo">
+				<expression>/widget/name</expression>
+				<expression>/widget/widgetUrl</expression>
+				<expression>/widget/icon</expression>
+			</select>
+			<select inputIndex="0" elementName="status">
+				<expression>/WidgetState/LastUpdate</expression>
+			</select>
+			<select inputIndex="2" elementName="rates">
+				<expression selectAll="true">/html/body/div/div/div/div/div/table/tr</expression>
+			</select>
+			<select inputIndex="1" elementName="authorInfo">
+				<expression>/widget/author</expression>
+				<expression>/widget/authorUrl</expression>
+			</select>
+			<select inputIndex="1" elementName="copyright">
+				<expression>/widget/sourceSite</expression>
+			</select>
+			
+		</xpath>
+		<xslTransformation id="IndexHTML" output="index.html">
+			<input>ResultSet</input>
+			<input>LoadXslt</input>
+		</xslTransformation>
+	</processes>
+	   
+</widget>
