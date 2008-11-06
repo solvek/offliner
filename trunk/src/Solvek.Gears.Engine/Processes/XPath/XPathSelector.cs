@@ -30,13 +30,27 @@ namespace Solvek.Gears.Engine.Processes.XPath
 				}
 
 				XmlDocument d = (XmlDocument) inputs[s.InputIndex];
-				XmlNamespaceManager nsm = new XmlNamespaceManager(d.NameTable);
+				XmlNamespaceManager nm = new XmlNamespaceManager(d.NameTable);
+				if (s.Namespaces != null)
+				{
+					foreach (Namespace ns in s.Namespaces)
+					{
+						nm.AddNamespace(ns.Prefix, ns.NamespaceUri);
+					}
+				}
 
 				if (s.XPathExpressions != null)
 				{
-					foreach (string x in s.XPathExpressions)
+					foreach (Expression x in s.XPathExpressions)
 					{
-						SelectAndAppend(x, d, result, nsm);
+						if (x.SelectAll)
+						{
+							SelectAllAndAppend(x.Value, d, result, nm);
+						}
+						else
+						{
+							SelectAndAppend(x.Value, d, result, nm);	
+						}
 					}
 				}
 				root.AppendChild(result);
@@ -60,9 +74,9 @@ namespace Solvek.Gears.Engine.Processes.XPath
 			OutputXmlDocument((XmlDocument)obj, stream);
 		}
 
-		static private void SelectAndAppend(string expression, XmlNode source, XmlNode currentNode, XmlNamespaceManager nsm)
+		static private void SelectAndAppend(string expression, XmlNode source, XmlNode currentNode, XmlNamespaceManager nm)
 		{
-			XmlNode node = source.SelectSingleNode(expression, nsm);
+			XmlNode node = source.SelectSingleNode(expression, nm);
 
 			if (node == null)
 			{
@@ -70,6 +84,21 @@ namespace Solvek.Gears.Engine.Processes.XPath
 			}
 
 			currentNode.InnerXml += node.OuterXml;
+		}
+
+		static private void SelectAllAndAppend(string expression, XmlNode source, XmlNode currentNode, XmlNamespaceManager nm)
+		{
+			XmlNodeList nodes = source.SelectNodes(expression, nm);
+
+			if (nodes == null)
+			{
+				throw new ApplicationException(string.Format("Вираз {0} не знайдено.", expression));
+			}
+
+			foreach (XmlNode node in nodes)
+			{
+				currentNode.InnerXml += node.OuterXml;	
+			}			
 		}
 	}
 }

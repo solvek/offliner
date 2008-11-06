@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9C99DAE9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestingApp", "TestingApp", "{1D49217E-7BAA-4CC4-B253-33D641338801}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{803DBD1B-981D-4126-9F4B-B83DE0B90BF4}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "Install_ua", "Install_ua\Install_ua.vddproj", "{1D3548D7-285E-4451-A04A-F462773A60B3}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Solvek.Offliner.vsmdi
@@ -46,6 +50,8 @@ Global
 		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCB3E08F-8BBE-4ACC-BC8C-1C3040372C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D3548D7-285E-4451-A04A-F462773A60B3}.Debug|Any CPU.ActiveCfg = Debug
+		{1D3548D7-285E-4451-A04A-F462773A60B3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +59,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{78EDBE79-0A71-4B63-9D03-230762DA5E44} = {1D49217E-7BAA-4CC4-B253-33D641338801}
 		{B7229CFB-4685-4B82-A361-0BF311F884D2} = {9C99DAE9-A708-4158-B7EF-C4316BDEAEAF}
+		{1D3548D7-285E-4451-A04A-F462773A60B3} = {803DBD1B-981D-4126-9F4B-B83DE0B90BF4}
 	EndGlobalSection
 EndGlobal

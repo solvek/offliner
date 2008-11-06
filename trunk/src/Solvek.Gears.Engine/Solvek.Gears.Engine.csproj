@@ -74,9 +74,12 @@
     <Compile Include="Processes\GetWidgetState.cs" />
     <Compile Include="Processes\LoadFile.cs" />
     <Compile Include="Processes\LoadXml.cs" />
+    <Compile Include="Processes\ParseXml.cs" />
     <Compile Include="Processes\ProcessCollection.cs" />
     <Compile Include="Processes\WebRequest.cs" />
     <Compile Include="Processes\Xmlize.cs" />
+    <Compile Include="Processes\XPath\Expression.cs" />
+    <Compile Include="Processes\XPath\Namespace.cs" />
     <Compile Include="Processes\XPath\Select.cs" />
     <Compile Include="Processes\XPath\XPathSelector.cs" />
     <Compile Include="Processes\XslTransformation.cs" />
