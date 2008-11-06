@@ -22,17 +22,14 @@
 				<a>
 					<xsl:attribute name="href"><xsl:value-of select="widgetUrl"/></xsl:attribute>
 					<xsl:value-of select="name"/>
-				</a>				
-			</div>			
+				</a>
+			</div>
 		</xsl:template>
 		<xsl:template match="status">
 			<div id="subTitle">
 				<span style="padding-left:10px">Останнє оновлення: <xsl:value-of select="substring(LastUpdate,1,10)"/></span>
-			</div>			
+			</div>
 		</xsl:template>
-		<xsl:template match="date">
-			<p>Дані на <xsl:value-of select="span"/></p>
-		</xsl:template>		
 		<xsl:template match="rates/table">
 			<ul>
 				<xsl:for-each select="tr[@class!='titles2']">
