@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<widget>
+	<id>accuweather@solvek.com</id>
+	<name>Погода Києва</name>
+	<widgetUrl>http://www.solvek.com/gears</widgetUrl>
+	<author>Sergi Adamchuk</author>
+	<authorUrl>http://www.solvek.com</authorUrl>
+	<updateProcess>IndexHTML</updateProcess>
+	<icon>accu.png</icon>
+	<sourceSite>http://www.accuweather.com/</sourceSite>
+
+	 
+	<processes>
+		<webRequest
+				id="LoadData"
+				url="http://forecastfox.accuweather.com/adcbin/forecastfox/weather_data.asp?location=EUR|UA|UP038|Kyiv|&amp;metric=1&amp;partner=forecastfox"
+				/>
+		<!-- <loadFile id="LoadData" path="webresult.bin"/> -->
+		<binaryToString id="CreateString">
+			<input>LoadData</input>
+		</binaryToString>
+		<parseXml id="MakeXml">
+			<input>CreateString</input>
+		</parseXml>
+		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
+		<loadXml id="LoadWidget" path="widget.xml"/>
+		<getWidgetState id="GetState"/>
+		<xpath id="ResultSet">
+			<input>GetState</input>
+			<input>LoadWidget</input>
+			<input>MakeXml</input>
+			
+			<select inputIndex="1" elementName="widgetInfo">
+				<expression>/widget/name</expression>
+				<expression>/widget/widgetUrl</expression>
+				<expression>/widget/icon</expression>
+			</select>
+			<select inputIndex="0" elementName="status">
+				<expression>/WidgetState/LastUpdate</expression>
+			</select>
+			<select inputIndex="2" elementName="days">
+				<namespace prefix="ns">http://www.accuweather.com</namespace>
+				<expression selectAll="true">//ns:adc_database/ns:forecast/ns:day</expression>
+			</select>
+			<select inputIndex="1" elementName="authorInfo">
+				<expression>/widget/author</expression>
+				<expression>/widget/authorUrl</expression>
+			</select>
+			<select inputIndex="1" elementName="copyright">
+				<expression>/widget/sourceSite</expression>
+			</select>
+			
+		</xpath>
+		<xslTransformation id="IndexHTML" output="index.html">
+			<input>ResultSet</input>
+			<input>LoadXslt</input>
+		</xslTransformation>
+	</processes>
+	   
+</widget>

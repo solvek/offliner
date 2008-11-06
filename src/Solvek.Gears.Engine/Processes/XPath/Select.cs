@@ -10,12 +10,15 @@ namespace Solvek.Gears.Engine.Processes.XPath
 		}
 
 		[XmlElement("expression")]
-		public string[] XPathExpressions;
+		public Expression[] XPathExpressions;
 
 		[XmlAttribute("elementName")]
 		public string ElementName = "result";
 
 		[XmlAttribute("inputIndex")]
 		public int InputIndex;
+
+		[XmlElement("namespace")]
+		public Namespace[] Namespaces;
 	}
 }

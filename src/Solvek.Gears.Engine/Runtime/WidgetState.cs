@@ -16,5 +16,13 @@ namespace Solvek.Gears.Engine.Runtime
 		{
 			return HostInfo.GetString("WidgetStatus_"+Status);
 		}
+
+		public WidgetState Clone()
+		{
+			WidgetState ws = new WidgetState();
+			ws.LastUpdate = this.LastUpdate;
+			ws.Status = this.Status;
+			return ws;
+		}
 	}
 }

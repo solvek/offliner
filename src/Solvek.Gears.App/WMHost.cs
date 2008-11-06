@@ -7,7 +7,7 @@ namespace Solvek.Gears.App
 {
 	class WMHost : HostInfo
 	{
-		public override WebRequest CreateRequest(string url)
+		public override WebRequest CreateRequest(Uri url)
 		{
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 

@@ -20,7 +20,8 @@ namespace Solvek.Gears.Engine.Processes
 		
 		protected override object ExecuteInternal(object[] inputs)
 		{
-			System.Net.WebRequest request = HostInfo.Instance.CreateRequest(Url);
+			Uri uri = new Uri(Url);
+			System.Net.WebRequest request = HostInfo.Instance.CreateRequest(uri);
 
 			request.Method = "GET";
 
@@ -51,22 +52,29 @@ namespace Solvek.Gears.Engine.Processes
 
 		private static byte[] ReadAllFromStream(Stream s)
 		{
-			const int bufSize = 9192;
-			byte[] res;
-			using (MemoryStream mem = new MemoryStream())
+			try
 			{
-				byte[] buf = new byte[bufSize];
-
-				int curSize;
-				while ((curSize = s.Read(buf, 0, bufSize)) > 0)
+				const int bufSize = 9192;
+				byte[] res;
+				using (MemoryStream mem = new MemoryStream())
 				{
-					mem.Write(buf, 0, curSize);
-				}
-				res = mem.GetBuffer();
-				mem.Close();
-			}
+					byte[] buf = new byte[bufSize];
 
-			return res;
+					int curSize;
+					while ((curSize = s.Read(buf, 0, bufSize)) > 0)
+					{
+						mem.Write(buf, 0, curSize);
+					}
+					res = mem.GetBuffer();
+					mem.Close();
+				}
+
+				return res;				
+			}
+			finally
+			{
+				s.Close();
+			}
 		}
 
 		static private readonly ILog _log = LogManager.GetLogger(typeof(WebRequest));

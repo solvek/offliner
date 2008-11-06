@@ -24,7 +24,7 @@ namespace Solvek.Gears.Engine.Processes
 			return proc.Execute();
 		}
 
-		public void ResetResults()
+		public void DiscardResults()
 		{
 			foreach(BaseProcess proc in _proc.Values)
 			{

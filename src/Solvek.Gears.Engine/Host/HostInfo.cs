@@ -8,7 +8,7 @@ namespace Solvek.Gears.Engine.Host
 {
 	public abstract class HostInfo
 	{
-		public abstract WebRequest CreateRequest(string url); 
+		public abstract WebRequest CreateRequest(Uri uri); 
 
         static public HostInfo Instance;
 

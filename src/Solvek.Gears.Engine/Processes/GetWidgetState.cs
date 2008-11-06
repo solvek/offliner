@@ -18,8 +18,10 @@ namespace Solvek.Gears.Engine.Processes
 			using(MemoryStream ms = new MemoryStream())
 			using (StreamWriter writer = new StreamWriter(ms))
 			{
+				WidgetState state = Context.State.Clone();
+				state.LastUpdate = DateTime.Now;
 				XmlSerializer sr = new XmlSerializer(typeof(WidgetState));
-				sr.Serialize(writer, Context.State);
+				sr.Serialize(writer, state);
 				ms.Seek(0, SeekOrigin.Begin);
 				doc.Load(ms);
 				writer.Close();
