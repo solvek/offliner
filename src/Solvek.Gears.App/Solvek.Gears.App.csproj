@@ -93,10 +93,6 @@
     <Compile Include="WMHost.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Failed.png" />
-    <Content Include="Images\NotUpdated.png" />
-    <Content Include="Images\Success.png" />
-    <Content Include="Images\Updating.png" />
     <Content Include="log4net.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
