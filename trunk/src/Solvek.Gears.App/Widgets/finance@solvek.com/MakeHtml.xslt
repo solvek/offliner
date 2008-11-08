@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xdt="http://www.w3.org/2005/xpath-datatypes">
-	<xsl:output method="xhtml" version="1.0" encoding="UTF-8" indent="yes"/>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xdt="http://www.w3.org/2005/xpath-datatypes">
 	<xsl:template match="/">
 		<html>
 			<head>
@@ -33,8 +32,6 @@
 	</xsl:template>
 	<xsl:template match="rates">
 		<ul>
-			<xsl:for-each select="3,4,5,13,14,15">
-			</xsl:for-each>
 			<xsl:call-template name="item">
 				<xsl:with-param name="data" select="tr[3]"/>
 				<xsl:with-param name="class" select="'evenRow'"/>
@@ -49,7 +46,22 @@
 				<xsl:with-param name="data" select="tr[5]"/>
 				<xsl:with-param name="class" select="'evenRow'"/>
 				<xsl:with-param name="text" select="'Готівка'"/>
+			</xsl:call-template>	
+			<xsl:call-template name="item">
+				<xsl:with-param name="data" select="tr[13]"/>
+				<xsl:with-param name="class" select="'oddRow'"/>
+				<xsl:with-param name="text" select="'Форекс'"/>
+			</xsl:call-template>
+			<xsl:call-template name="item">
+				<xsl:with-param name="data" select="tr[14]"/>
+				<xsl:with-param name="class" select="'evenRow'"/>
+				<xsl:with-param name="text" select="'Форекс'"/>
 			</xsl:call-template>			
+			<xsl:call-template name="item">
+				<xsl:with-param name="data" select="tr[15]"/>
+				<xsl:with-param name="class" select="'oddRow'"/>
+				<xsl:with-param name="text" select="'Форекс'"/>
+			</xsl:call-template>				
 		</ul>
 	</xsl:template>
 	<xsl:template match="authorInfo">

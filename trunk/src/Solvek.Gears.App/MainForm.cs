@@ -54,9 +54,19 @@ namespace Solvek.Gears.App
 				{
 					processor.Update();
 				}
-				catch (ApplicationException ex)
+				catch (Exception ex)
 				{
-					MessageBox.Show(String.Format("Failed to update data for widget {0}. Error: {1}", processor, ex.Message));
+					string details;
+					if (ex is ApplicationException)
+					{
+						details = ex.Message;
+					}
+					else
+					{
+						details = String.Format("Внутрішня помилка ({0})", ex.Message);
+					}
+					_log.Error(String.Format("Data update error for widget {0}", processor), ex);
+					MessageBox.Show(String.Format("Помилка при оновленні даних '{0}': {1}", processor, details));
 				}
 				wli.RedrawStatus();
 				listViewWidgets.Refresh();

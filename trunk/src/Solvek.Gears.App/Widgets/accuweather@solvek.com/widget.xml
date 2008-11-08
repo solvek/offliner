@@ -13,13 +13,12 @@
 	<processes>
 		<webRequest
 				id="LoadData"
-				url="http://forecastfox.accuweather.com/adcbin/forecastfox/weather_data.asp?location=EUR|UA|UP038|Kyiv|&amp;metric=1&amp;partner=forecastfox"
-				/>
+				url="http://forecastfox.accuweather.com/adcbin/forecastfox/weather_data.asp?location=EUR|UA|UP009|KIEV|&amp;metric=1&amp;partner=forecastfox"/>
 		<!-- <loadFile id="LoadData" path="webresult.bin"/> -->
 		<binaryToString id="CreateString">
 			<input>LoadData</input>
 		</binaryToString>
-		<parseXml id="MakeXml">
+		<parseXml id="MakeXml" processDocumentTag="false">
 			<input>CreateString</input>
 		</parseXml>
 		<loadXml id="LoadXslt" path="MakeHtml.xslt"/>
