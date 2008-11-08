@@ -34,7 +34,7 @@ namespace Solvek.Gears.Engine.Processes
 			{
 				_log.Error("Web requesting error: ", ex);
 				_log.DebugFormat("WebException datails. Status: {0}", ex.Status);
-				throw new ApplicationException(String.Format("Failed to retrieve data from {0}", Url), ex);
+				throw new ApplicationException(String.Format("Не вдалось відкрити сторінку {0}", Url), ex);
 			}
 
 			return ReadAllFromStream(resp.GetResponseStream());
