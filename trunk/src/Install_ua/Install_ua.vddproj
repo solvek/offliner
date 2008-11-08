@@ -14,30 +14,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_036C967EC29142F1AC36DA6B4F23801B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_036EE49DA1924F348A2FD1D4F5F7A218"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0634D0D12D8A465D87BF42D2CFC28169"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_098FBFCBF90946E18D7739BBBF54AEBA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_09F758EF27AC6379386CD6EE99960DFD"
         "OwnerKey" = "8:_7AC84DBFEAF040A4B9E2FB1BACB0A991"
         "MsmSig" = "8:_UNDEFINED"
@@ -46,84 +22,6 @@
         {
         "MsmKey" = "8:_09F9175F1135F37848CEB6580CDCF924"
         "OwnerKey" = "8:_E21F1933686335F8A98EAE2F67BC3CCF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1079D09021774366A9515222E2F9A412"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_116D6DD504F1426B84BD5989070FDA9B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_13C7836D727C4AF780A16D283FEF261E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_14799F4FDC4345838930B9460C5190F9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_20FD6F1175CC40C08CDE65CA56E4DC7E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_231F7A2748F94D9CB1A78C82EDA34EC9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_25B3FCB1C4894F28AA2927AA1AAB9B78"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2BB17953430744CD9A4ED828BD45CF2C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_30D51D0DC4B94AC58986AC168C58A05F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_36256D9A050C4C56BE31BAF4ADA94A60"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_374262E9CF8C43239A420F6ADEE8EA56"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3E97BFA1BCED48B386F363953475B75B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_418A6427439C4F01B79A14DF8A109A08"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -182,62 +80,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4BAC5F8037B74ED1B272251501007512"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4E7DE42F68E34075966A64E07D4E745B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4ED5D23BAF90441681C90D488B0A30AB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_4F2A852372DEBA01699991673ABA0AD9"
         "OwnerKey" = "8:_7AC84DBFEAF040A4B9E2FB1BACB0A991"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_50A459FE18224BC6AFFBDE442B90E103"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5121B4DE7B8041C19F06A5D47ADDD431"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5152D07671144F2E844B731CF8785340"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_52E14C5342A54564B1C5A934684297DF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_56BD6DBFEB9AD573345C412F0E998AC2"
         "OwnerKey" = "8:_7AC84DBFEAF040A4B9E2FB1BACB0A991"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5BCDB143FEB244999A8B57CF5A56DE7B"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -272,12 +122,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_69B35E8F7A974C3E89A624CDAEAE2641"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_6C51847F0D2FC647E88059E5089FBE88"
         "OwnerKey" = "8:_09F758EF27AC6379386CD6EE99960DFD"
         "MsmSig" = "8:_UNDEFINED"
@@ -296,26 +140,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_71B93A2995EA49AE8DA7782BE7C06ABF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_72EC6FB8435241F09E8574433CC81EA7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_79F4D54231A8471339BDF8E7F260C3F2"
         "OwnerKey" = "8:_09F9175F1135F37848CEB6580CDCF924"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7A5C3A133BCF4AE29652600A5A0F56B3"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -332,108 +158,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9BD0B778FA774EA386F21AC1D106D89A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A49278B42F18441AB5B96A5A1DF82FEB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A5C50CA710884EF2B9FFDA8CA583690B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_ABEF0A14900C42D58B3E13346292A8A4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_ABF453821E674544A0B77A0B280F821A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AC7F9C0387E7464CB6574B0CABACB95A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B6FE34CC556142CFA0BAABDDFD5E02BD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B71B2C002791483E8A2B8AC91905AA40"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BAC2D17B102544C2B63D6D621A18E1A6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BBAF3708F7BA4FEBB14D07594781A7D7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BC855823D9E4495E9B44224E56EEE62E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C13C898A2A1D454DA62F4EF89EFD11EC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C36D0EAB43E14B9CADD0CDACDF595B37"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C38FE74FF4A64B93912DEAB72E97F0D4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C47017BB4B6144A8B3BC52B4A0A6BAAB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C47B41B0D63143D2B85808BADC8C038D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C6D64199784C4D0A9EB9C022A104BEA1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_CBCF3E0E300DA9351BA6F4F30AC32586"
         "OwnerKey" = "8:_7AC84DBFEAF040A4B9E2FB1BACB0A991"
         "MsmSig" = "8:_UNDEFINED"
@@ -446,48 +170,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CD0412DB866F4BDC97AF329DC22897FA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CE3662487C5E43D5B7E683F76C2A4F86"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D1B65F02565149B68ACF88CC57275C45"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DB47375CEA784E78BF0E4B013C330526"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DC0D6460ECAD4BA9B351FF08DC165613"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DC922736AAEE4DCB92D6D8437B7F3DF6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DD693C60F1D84855B0DE9DFCB3E89846"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E21F1933686335F8A98EAE2F67BC3CCF"
         "OwnerKey" = "8:_7AC84DBFEAF040A4B9E2FB1BACB0A991"
         "MsmSig" = "8:_UNDEFINED"
@@ -496,36 +178,6 @@
         {
         "MsmKey" = "8:_E21F1933686335F8A98EAE2F67BC3CCF"
         "OwnerKey" = "8:_56BD6DBFEB9AD573345C412F0E998AC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E6B81E207A3440BA9D603FF3B11B012C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E89BF303E5B14AF3A2048BA9DE40C7B3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E8A64CF840D944D280EF646D0FC91471"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EA7412993AD440DE9D51A28EBC57D9C2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F316E44C3A4142FB844443919EBB0F58"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -560,78 +212,6 @@
     {
         "File"
         {
-            "{BA458234-9B71-4F46-8107-E91156377184}:_036C967EC29142F1AC36DA6B4F23801B"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\37.png"
-            "TargetName" = "8:37.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_036EE49DA1924F348A2FD1D4F5F7A218"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\Common\\common.css"
-            "TargetName" = "8:common.css"
-            "Tag" = "8:"
-            "Folder" = "8:_15AC5B194DB04F29B6206AD4AAC258CF"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_0634D0D12D8A465D87BF42D2CFC28169"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\43.png"
-            "TargetName" = "8:43.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_098FBFCBF90946E18D7739BBBF54AEBA"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\03.png"
-            "TargetName" = "8:03.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_09F758EF27AC6379386CD6EE99960DFD"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -753,240 +333,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_1079D09021774366A9515222E2F9A412"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\34.png"
-            "TargetName" = "8:34.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_116D6DD504F1426B84BD5989070FDA9B"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\16.png"
-            "TargetName" = "8:16.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_13C7836D727C4AF780A16D283FEF261E"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\05.png"
-            "TargetName" = "8:05.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_14799F4FDC4345838930B9460C5190F9"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\41.png"
-            "TargetName" = "8:41.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_20FD6F1175CC40C08CDE65CA56E4DC7E"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\22.png"
-            "TargetName" = "8:22.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_231F7A2748F94D9CB1A78C82EDA34EC9"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\33.png"
-            "TargetName" = "8:33.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_25B3FCB1C4894F28AA2927AA1AAB9B78"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\swa.png"
-            "TargetName" = "8:swa.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_2BB17953430744CD9A4ED828BD45CF2C"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\12.png"
-            "TargetName" = "8:12.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_30D51D0DC4B94AC58986AC168C58A05F"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\rates@solvek.com\\none.gif"
-            "TargetName" = "8:none.gif"
-            "Tag" = "8:"
-            "Folder" = "8:_CA2369032C86496E8E3DCBD038A39142"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_36256D9A050C4C56BE31BAF4ADA94A60"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\nburates@solvek.com\\MakeHtml.xslt"
-            "TargetName" = "8:MakeHtml.xslt"
-            "Tag" = "8:"
-            "Folder" = "8:_EDFEA6337C0C45D9B39CD8E837FD758C"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_374262E9CF8C43239A420F6ADEE8EA56"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\radar.png"
-            "TargetName" = "8:radar.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_3E97BFA1BCED48B386F363953475B75B"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\rates@solvek.com\\MakeHtml.xslt"
-            "TargetName" = "8:MakeHtml.xslt"
-            "Tag" = "8:"
-            "Folder" = "8:_CA2369032C86496E8E3DCBD038A39142"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_418A6427439C4F01B79A14DF8A109A08"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\04.png"
-            "TargetName" = "8:04.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_459404903DB0ED385BB10730F3CCA134"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -1043,60 +389,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_4BAC5F8037B74ED1B272251501007512"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\finance@solvek.com\\MakeHtml.xslt"
-            "TargetName" = "8:MakeHtml.xslt"
-            "Tag" = "8:"
-            "Folder" = "8:_1AE464A891E94C1588172A58E9B801FE"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_4E7DE42F68E34075966A64E07D4E745B"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\40.png"
-            "TargetName" = "8:40.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_4ED5D23BAF90441681C90D488B0A30AB"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\23.png"
-            "TargetName" = "8:23.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_4F2A852372DEBA01699991673ABA0AD9"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -1123,78 +415,6 @@
             "Register" = "3:0"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_50A459FE18224BC6AFFBDE442B90E103"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\02.png"
-            "TargetName" = "8:02.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_5121B4DE7B8041C19F06A5D47ADDD431"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\38.png"
-            "TargetName" = "8:38.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_5152D07671144F2E844B731CF8785340"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\35.png"
-            "TargetName" = "8:35.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_52E14C5342A54564B1C5A934684297DF"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\25.png"
-            "TargetName" = "8:25.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_56BD6DBFEB9AD573345C412F0E998AC2"
@@ -1225,24 +445,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_5BCDB143FEB244999A8B57CF5A56DE7B"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\rates@solvek.com\\widget.xml"
-            "TargetName" = "8:widget.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_CA2369032C86496E8E3DCBD038A39142"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_68DDBCB1441F6A31252B90DFDB597FC6"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -1269,24 +471,6 @@
             "Register" = "3:0"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_69B35E8F7A974C3E89A624CDAEAE2641"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\21.png"
-            "TargetName" = "8:21.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_6C51847F0D2FC647E88059E5089FBE88"
@@ -1317,42 +501,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_71B93A2995EA49AE8DA7782BE7C06ABF"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\17.png"
-            "TargetName" = "8:17.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_72EC6FB8435241F09E8574433CC81EA7"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\MakeHtml.xslt"
-            "TargetName" = "8:MakeHtml.xslt"
-            "Tag" = "8:"
-            "Folder" = "8:_60B9C0F4940F4622B2AB14CE9AFC0604"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{BA458234-9B71-4F46-8107-E91156377184}:_79F4D54231A8471339BDF8E7F260C3F2"
             {
             "SourcePath" = "8:mscorlib.tlb"
@@ -1371,24 +519,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_7A5C3A133BCF4AE29652600A5A0F56B3"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\rates@solvek.com\\money.png"
-            "TargetName" = "8:money.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CA2369032C86496E8E3DCBD038A39142"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{BA458234-9B71-4F46-8107-E91156377184}:_9659D117DC1F0F6A8AD9DDBA87095035"
             {
             "SourcePath" = "8:msxml3.dll"
@@ -1405,312 +535,6 @@
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_9BD0B778FA774EA386F21AC1D106D89A"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\widget.xml"
-            "TargetName" = "8:widget.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_60B9C0F4940F4622B2AB14CE9AFC0604"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_A49278B42F18441AB5B96A5A1DF82FEB"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\29.png"
-            "TargetName" = "8:29.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_A5C50CA710884EF2B9FFDA8CA583690B"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\42.png"
-            "TargetName" = "8:42.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_ABEF0A14900C42D58B3E13346292A8A4"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\07.png"
-            "TargetName" = "8:07.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_ABF453821E674544A0B77A0B280F821A"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\18.png"
-            "TargetName" = "8:18.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_AC7F9C0387E7464CB6574B0CABACB95A"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\nburates@solvek.com\\widget.xml"
-            "TargetName" = "8:widget.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_EDFEA6337C0C45D9B39CD8E837FD758C"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_B6FE34CC556142CFA0BAABDDFD5E02BD"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\36.png"
-            "TargetName" = "8:36.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_B71B2C002791483E8A2B8AC91905AA40"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\30.png"
-            "TargetName" = "8:30.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_BAC2D17B102544C2B63D6D621A18E1A6"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\13.png"
-            "TargetName" = "8:13.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_BBAF3708F7BA4FEBB14D07594781A7D7"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\19.png"
-            "TargetName" = "8:19.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_BC855823D9E4495E9B44224E56EEE62E"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\32.png"
-            "TargetName" = "8:32.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_C13C898A2A1D454DA62F4EF89EFD11EC"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\nburates@solvek.com\\nbu.png"
-            "TargetName" = "8:nbu.png"
-            "Tag" = "8:"
-            "Folder" = "8:_EDFEA6337C0C45D9B39CD8E837FD758C"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_C36D0EAB43E14B9CADD0CDACDF595B37"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\44.png"
-            "TargetName" = "8:44.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_C38FE74FF4A64B93912DEAB72E97F0D4"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\39.png"
-            "TargetName" = "8:39.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_C47017BB4B6144A8B3BC52B4A0A6BAAB"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\11.png"
-            "TargetName" = "8:11.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_C47B41B0D63143D2B85808BADC8C038D"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\15.png"
-            "TargetName" = "8:15.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_C6D64199784C4D0A9EB9C022A104BEA1"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\14.png"
-            "TargetName" = "8:14.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_CBCF3E0E300DA9351BA6F4F30AC32586"
@@ -1741,132 +565,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_CD0412DB866F4BDC97AF329DC22897FA"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\24.png"
-            "TargetName" = "8:24.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_CE3662487C5E43D5B7E683F76C2A4F86"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\01.png"
-            "TargetName" = "8:01.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_D1B65F02565149B68ACF88CC57275C45"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\06.png"
-            "TargetName" = "8:06.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_DB47375CEA784E78BF0E4B013C330526"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\26.png"
-            "TargetName" = "8:26.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_DC0D6460ECAD4BA9B351FF08DC165613"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\31.png"
-            "TargetName" = "8:31.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_DC922736AAEE4DCB92D6D8437B7F3DF6"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\rates@solvek.com\\arrowUp.gif"
-            "TargetName" = "8:arrowUp.gif"
-            "Tag" = "8:"
-            "Folder" = "8:_CA2369032C86496E8E3DCBD038A39142"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_DD693C60F1D84855B0DE9DFCB3E89846"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\08.png"
-            "TargetName" = "8:08.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_E21F1933686335F8A98EAE2F67BC3CCF"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -1893,96 +591,6 @@
             "Register" = "3:0"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_E6B81E207A3440BA9D603FF3B11B012C"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\icons\\20.png"
-            "TargetName" = "8:20.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5F37366D79A440B6AB6805F384BA7508"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_E89BF303E5B14AF3A2048BA9DE40C7B3"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\finance@solvek.com\\fin.png"
-            "TargetName" = "8:fin.png"
-            "Tag" = "8:"
-            "Folder" = "8:_1AE464A891E94C1588172A58E9B801FE"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_E8A64CF840D944D280EF646D0FC91471"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\accuweather@solvek.com\\accu.png"
-            "TargetName" = "8:accu.png"
-            "Tag" = "8:"
-            "Folder" = "8:_60B9C0F4940F4622B2AB14CE9AFC0604"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_EA7412993AD440DE9D51A28EBC57D9C2"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\finance@solvek.com\\widget.xml"
-            "TargetName" = "8:widget.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_1AE464A891E94C1588172A58E9B801FE"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{BA458234-9B71-4F46-8107-E91156377184}:_F316E44C3A4142FB844443919EBB0F58"
-            {
-            "SourcePath" = "8:..\\Solvek.Gears.App\\Widgets\\rates@solvek.com\\arrowDown.gif"
-            "TargetName" = "8:arrowDown.gif"
-            "Tag" = "8:"
-            "Folder" = "8:_CA2369032C86496E8E3DCBD038A39142"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:0"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -2028,69 +636,6 @@
                             "Property" = "8:_8BAE2B8644EF4F029982BDE984F17438"
                                 "Folders"
                                 {
-                                    "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_7ACEB402F55B4F6B93606DA5CCF3B7CC"
-                                    {
-                                    "Name" = "8:Widgets"
-                                    "Condition" = "8:"
-                                    "Property" = "8:_136A1DADBD48417CA308DC68A7B81B84"
-                                        "Folders"
-                                        {
-                                            "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_15AC5B194DB04F29B6206AD4AAC258CF"
-                                            {
-                                            "Name" = "8:Common"
-                                            "Condition" = "8:"
-                                            "Property" = "8:_8D61AB4624844CF0A01AF747A482CD21"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                            "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_1AE464A891E94C1588172A58E9B801FE"
-                                            {
-                                            "Name" = "8:finance@solvek.com"
-                                            "Condition" = "8:"
-                                            "Property" = "8:_CE16E521A46F4989A8F4C0379500EDDF"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                            "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_60B9C0F4940F4622B2AB14CE9AFC0604"
-                                            {
-                                            "Name" = "8:accuweather@solvek.com"
-                                            "Condition" = "8:"
-                                            "Property" = "8:_7A5CA8C4836E48C6B2B7ACE0508573BC"
-                                                "Folders"
-                                                {
-                                                    "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_5F37366D79A440B6AB6805F384BA7508"
-                                                    {
-                                                    "Name" = "8:icons"
-                                                    "Condition" = "8:"
-                                                    "Property" = "8:_05E47A9C7D92418D9E564BBF34CF3E73"
-                                                        "Folders"
-                                                        {
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_CA2369032C86496E8E3DCBD038A39142"
-                                            {
-                                            "Name" = "8:rates@solvek.com"
-                                            "Condition" = "8:"
-                                            "Property" = "8:_77282849CD6746D29D61C307209CA2B0"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                            "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_EDFEA6337C0C45D9B39CD8E837FD758C"
-                                            {
-                                            "Name" = "8:nburates@solvek.com"
-                                            "Condition" = "8:"
-                                            "Property" = "8:_113BB607E36F454981289B8423550E35"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -2131,6 +676,32 @@
             "ProjectOutputGroupRegister" = "3:0"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{9A893B14-9BD6-4343-B366-A83E2FDC9872}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_B9204FF492D74CDB90DCEE6BBC2EB15F"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A72B590666064EC199D71DF3390F8697"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:0"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:ContentFiles"
             "OutputProjectGuid" = "8:{9A893B14-9BD6-4343-B366-A83E2FDC9872}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
