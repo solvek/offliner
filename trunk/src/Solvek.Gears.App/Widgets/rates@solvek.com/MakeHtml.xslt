@@ -4,7 +4,7 @@
 		<xsl:template match="/">
 			<html>
 				<head>
-					<title>Офіційні курси валют</title>
+					<title>Економічні показники</title>
 					<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 					<link type="text/css" rel="stylesheet" href="../common/common.css" />
 				</head>
