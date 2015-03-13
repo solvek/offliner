@@ -1,0 +1,1 @@
+Shows information on your Windows Mobile device and synchronize this info with online sources
